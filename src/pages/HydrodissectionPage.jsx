@@ -4,6 +4,7 @@ import './HydrodissectionPage.css';
 import hydroHeroImg from '../assets/images/hydro_carpal.png';
 import hydroTreatmentImg from '../assets/images/hydro_treatment.jpg';
 import carpalTunnelImg from '../assets/images/carpal_tunnel_illust.png';
+import rmskBadgeImg from '../assets/images/rmsk_certification.png';
 
 const HydrodissectionPage = () => {
     useEffect(() => {
@@ -55,6 +56,77 @@ const HydrodissectionPage = () => {
                 </div>
             </section>
 
+            <section className="py-20 bg-white border-y border-gray-100 relative overflow-hidden rmsk-section">
+                <div className="container relative z-10">
+                    <div className="flex flex-col md:flex-row items-center max-w-5xl mx-auto" style={{ display: 'flex', gap: '40px' }}>
+                        {/* Left: Content Area */}
+                        <div className="rmsk-content" style={{ md: { flex: '2' }, flex: '1' }}>
+                            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3 leading-tight">
+                                <span className="text-amber-500">국제적으로 인증받은</span> 초음파 전문가,<br />
+                                RMSK 자격 보유
+                            </h2>
+                            <p className="text-slate-600 text-lg mb-8 font-light">
+                                "초음파 시술, 기계보다 중요한 것은 <strong className="text-slate-900 font-medium">'보는 의사의 눈'</strong>과 <strong className="text-slate-900 font-medium">'실력'</strong>입니다."
+                            </p>
+
+                            <div className="grid md:grid-cols-1 gap-12">
+                                <div className="flex items-start" style={{ display: 'flex', alignItems: 'flex-start' }}>
+                                    <div className="flex-shrink-0 mt-1">
+                                        <div className="w-8 h-8 rounded-full bg-amber-50 rounded-full flex items-center justify-center">
+                                            <span className="text-amber-500 font-bold text-xs">01</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-base font-bold text-slate-800 mb-0">RMSK(Registered in Musculoskeletal sonography)란?</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                            미국 진단초음파 의사협회(APCA)가 인증하는 국제 근골격계 초음파 자격으로,
+                                            엄격한 시험과 임상 경험을 통과해야만 취득할 수 있는 고난도 자격증입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start" style={{ display: 'flex', alignItems: 'flex-start' }}>
+                                    <div className="flex-shrink-0 mt-1">
+                                        <div className="w-8 h-8 rounded-full bg-amber-50 rounded-full flex items-center justify-center">
+                                            <span className="text-amber-500 font-bold text-xs">02</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-base font-bold text-slate-800 mb-0">하이드로다이섹션 특화 자격</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                            단순한 진단을 넘어, 초음파를 보며 실시간으로 치료하는 '초음파 유도하 중재시술(Ultrasound Guided Intervention)'에
+                                            대한 해부학적 지식과 숙련도를 국제 표준 수준으로 검증받았습니다.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-start" style={{ display: 'flex', alignItems: 'flex-start' }}>
+                                    <div className="flex-shrink-0 mt-1">
+                                        <div className="w-8 h-8 rounded-full bg-amber-50 rounded-full flex items-center justify-center">
+                                            <span className="text-amber-500 font-bold text-xs">03</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-base font-bold text-slate-800 mb-0">검증된 안전성과 정확도</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                            신경, 혈관, 근육을 mm 단위로 구별해내는 RMSK 인증 의료진이 직접 시술하므로,
+                                            고난도 하이드로다이섹션 치료도 안심하고 받을 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right: Badge Area */}
+                        <div className="md:block" style={{ flex: '1', maxWidth: '33.33%' }}>
+                            <img
+                                src={rmskBadgeImg}
+                                alt="RMSK Certification Badge"
+                                style={{ width: '100%', height: 'auto', padding: '20px', display: 'block' }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
             {/* 3. Why Choose Us? (Emphasized) */}
             <section className="section hydro-why">
                 <div className="container">
@@ -95,7 +167,7 @@ const HydrodissectionPage = () => {
 
                     <div className="target-group mb-50">
                         <div className="flex align-center gap-30 responsive-col-reverse">
-                            <div style={{ flex: 1 }}>
+                            <div style={{ flex: 2 }}>
                                 <h3 className="group-title"><span className="indicator">A</span> 말초신경 포착 질환 (저림, 통증)</h3>
                                 <div className="grid-card-list">
                                     <div className="target-card">손목터널증후군 (Carpal Tunnel Syndrome)</div>
@@ -108,7 +180,7 @@ const HydrodissectionPage = () => {
                                 </div>
                             </div>
                             <div className="illust-container" style={{ flex: 1, textAlign: 'center' }}>
-                                <img src={carpalTunnelImg} alt="Carpal Tunnel Syndrome Illustration" style={{ maxWidth: '100%', borderRadius: '12px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }} />
+                                <img src={carpalTunnelImg} alt="Carpal Tunnel Syndrome Illustration" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }} />
                                 <p className="caption mt-10" style={{ fontSize: '0.9rem', color: '#666' }}>손목터널증후군의 신경 압박 메커니즘</p>
                             </div>
                         </div>

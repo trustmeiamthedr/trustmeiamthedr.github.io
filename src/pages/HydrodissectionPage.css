@@ -219,11 +219,58 @@
 }
 
 .treatment-img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 900px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    object-width: 600px;
     height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* RMSK Section Refinements */
+.rmsk-section .flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.rmsk-content {
+    flex: 1;
+}
+
+.rmsk-badge-wrapper {
+    flex: 0 0 180px;
+    /* Force-fixed width */
+    max-width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rmsk-badge-img {
+    width: 100% !important;
+    height: auto !important;
+    padding: 20px !important;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 768px) {
+    .rmsk-section .flex {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .rmsk-badge-wrapper {
+        flex: 0 0 auto;
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .treatment-img {
+        width: 100%;
+    }
 }
 
 /* 5. Benefits */
