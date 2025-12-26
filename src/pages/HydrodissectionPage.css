@@ -1,0 +1,314 @@
+/* HydrodissectionPage.css */
+
+:root {
+    --hydro-primary: #0d2d62;
+    /* Deep Blue from existing project */
+    --hydro-accent: #00897b;
+    /* Teal for 'Natural/Safe' feeling */
+    --hydro-text: #333;
+    --hydro-bg-light: #f9f9f9;
+}
+
+.hydro-page .section {
+    padding: 80px 0;
+}
+
+/* 1. Hero Section */
+.hydro-hero {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 160px 0 120px;
+    position: relative;
+}
+
+.hydro-hero .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hydro-hero .hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 2. What is */
+.hydro-what .section-title {
+    color: var(--hydro-primary);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.hydro-what .section-desc {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    word-break: keep-all;
+}
+
+.feature-badges {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #eef2ff;
+    color: var(--hydro-primary);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.video-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid helper */
+.gap-50 {
+    gap: 50px;
+}
+
+.responsive-col {
+    display: flex;
+    align-items: center;
+}
+
+.responsive-col>* {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .responsive-col {
+        flex-direction: column;
+    }
+
+    .responsive-col-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .video-placeholder {
+        margin-top: 30px;
+    }
+}
+
+
+/* 3. Why Choose Us (Dark Background) */
+.hydro-why {
+    background-color: var(--hydro-primary);
+    color: #fff;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.highlight-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.highlight-card.natural {
+    border-top: 5px solid var(--hydro-accent);
+}
+
+.highlight-card.precision {
+    border-top: 5px solid #29b6f6;
+}
+
+.card-icon {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.highlight-card h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.highlight-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* 4. Targets */
+.group-title {
+    font-size: 1.4rem;
+    color: var(--hydro-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.indicator {
+    background: var(--hydro-primary);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.grid-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.target-card {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.target-card:hover {
+    border-color: var(--hydro-primary);
+    color: var(--hydro-primary);
+    transform: translateX(5px);
+}
+
+.treatment-img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    object-width: 600px;
+    height: auto;
+}
+
+/* 5. Benefits */
+.bg-gray {
+    background-color: #f9f9f9;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.check-icon {
+    background: var(--hydro-accent);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.benefit-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 6. CTA */
+.hydro-cta {
+    padding: 100px 0;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: var(--hydro-primary);
+    color: #fff;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-large:hover {
+    background: #1a4f9c;
+}
+
+/* Utils */
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.opacity-8 {
+    opacity: 0.8;
+}
