@@ -65,11 +65,11 @@ const HydrodissectionPage = () => {
                                 <span className="text-amber-500">국제적으로 인증받은</span> 초음파 전문가,<br />
                                 RMSK 자격 보유
                             </h2>
-                            <p className="text-slate-600 text-lg mb-8 font-light">
+                            <p className="text-slate-600 text-lg font-light" style={{ marginBottom: '10px' }}>
                                 "초음파 시술, 기계보다 중요한 것은 <strong className="text-slate-900 font-medium">'보는 의사의 눈'</strong>과 <strong className="text-slate-900 font-medium">'실력'</strong>입니다."
                             </p>
 
-                            <div className="grid md:grid-cols-1 gap-12">
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
                                 <div className="flex items-start" style={{ display: 'flex', alignItems: 'flex-start' }}>
                                     <div className="flex-shrink-0 mt-1">
                                         <div className="w-8 h-8 rounded-full bg-amber-50 rounded-full flex items-center justify-center">
@@ -77,8 +77,8 @@ const HydrodissectionPage = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-800 mb-0">RMSK(Registered in Musculoskeletal sonography)란?</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                        <h4 className="text-base font-bold text-slate-800" style={{ marginBottom: '4px' }}>RMSK(Registered in Musculoskeletal sonography)란?</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed" style={{ marginTop: '0' }}>
                                             미국 진단초음파 의사협회(APCA)가 인증하는 국제 근골격계 초음파 자격으로,
                                             엄격한 시험과 임상 경험을 통과해야만 취득할 수 있는 고난도 자격증입니다.
                                         </p>
@@ -91,8 +91,8 @@ const HydrodissectionPage = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-800 mb-0">하이드로다이섹션 특화 자격</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                        <h4 className="text-base font-bold text-slate-800" style={{ marginBottom: '4px' }}>하이드로다이섹션 특화 자격</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed" style={{ marginTop: '0' }}>
                                             단순한 진단을 넘어, 초음파를 보며 실시간으로 치료하는 '초음파 유도하 중재시술(Ultrasound Guided Intervention)'에
                                             대한 해부학적 지식과 숙련도를 국제 표준 수준으로 검증받았습니다.
                                         </p>
@@ -106,8 +106,8 @@ const HydrodissectionPage = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-bold text-slate-800 mb-0">검증된 안전성과 정확도</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                        <h4 className="text-base font-bold text-slate-800" style={{ marginBottom: '4px' }}>검증된 안전성과 정확도</h4>
+                                        <p className="text-slate-600 text-sm leading-relaxed" style={{ marginTop: '0' }}>
                                             신경, 혈관, 근육을 mm 단위로 구별해내는 RMSK 인증 의료진이 직접 시술하므로,
                                             고난도 하이드로다이섹션 치료도 안심하고 받을 수 있습니다.
                                         </p>
