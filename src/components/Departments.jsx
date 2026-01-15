@@ -104,7 +104,7 @@ const Departments = () => {
                     <div className="header-controls" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                         <div className="control-btn" onClick={prevSlide}><i className="fa fa-angle-left"></i></div>
                         <div className="control-btn" onClick={nextSlide}><i className="fa fa-angle-right"></i></div>
-                        <a href="#" className="btn-gray" style={{ marginLeft: '10px' }}>ALL DEPARTMENTS</a>
+                        <Link to="/departments" className="btn-gray" style={{ marginLeft: '10px' }}>ALL DEPARTMENTS</Link>
                     </div>
                 </div>
 
@@ -123,7 +123,7 @@ const Departments = () => {
                                             {dept.type === 'image' ? (
                                                 <img
                                                     src={dept.icon}
-                                                    alt={dept.name}
+                                                    alt={dept.label}
                                                     style={{
                                                         width: '100%',
                                                         height: '100%',
@@ -135,7 +135,7 @@ const Departments = () => {
                                                 <i className={`fa ${dept.icon}`}></i>
                                             )}
                                         </div>
-                                        <h4 style={{ fontSize: '16px', fontWeight: '500', color: '#333' }}>{dept.name}</h4>
+                                        <h4 style={{ fontSize: '16px', fontWeight: '500', color: '#333' }}>{dept.label}</h4>
                                     </div>
                                 );
 

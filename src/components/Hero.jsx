@@ -48,6 +48,8 @@ const Hero = () => {
                 right: 0,
                 bottom: 0,
                 backgroundColor: 'rgba(255, 255, 255, 0.4)',
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 15h2v10h-2V15zm-4 4h10v2h-10v-2z' fill='%23ff5e62' fill-opacity='0.1'/%3E%3C/svg%3E")`,
+                backgroundSize: '40px 40px',
                 zIndex: 1
             }}></div>
 
@@ -80,7 +82,12 @@ const Hero = () => {
                         {slideContent.title}
                     </h1>
                     <div className="fade-in-up delay-400">
-                        <a href="#" className="btn">
+                        <a
+                            href={slideContent.link || "#"}
+                            className="btn"
+                            target={slideContent.link?.startsWith('http') ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                        >
                             {slideContent.buttonText}
                         </a>
                     </div>

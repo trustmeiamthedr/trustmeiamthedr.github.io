@@ -295,7 +295,6 @@ section {
   background-color: #fff;
   height: 100%;
   cursor: pointer;
-  isolation: isolate;
 }
 
 .dept-icon {
@@ -310,6 +309,9 @@ section {
   justify-content: center;
   margin: 0 auto 20px auto;
   transition: all 0.3s ease;
+  /* Ensure clean stacking context */
+  /* isolation: isolate; REMOVED to fix blend mode bug */
+  mix-blend-mode: normal;
 }
 
 .dept-card h4 {
@@ -332,17 +334,23 @@ section {
 
 /* Base Image Styles */
 .dept-icon img {
-  mix-blend-mode: multiply;
+  /* Only transition transform to avoid Safari blend mode transition bugs */
   transition: transform 0.3s ease;
   width: 100%;
-  /* Removed will-change to prevent premature stacking context issues */
+  mix-blend-mode: multiply;
+  /* Base: Hide white background */
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-/* Hover: Transform and Blend Image */
+/* Hover: Transform and Whiten Image */
 .dept-card:hover .dept-icon img {
   transform: translateY(-8px);
-  filter: grayscale(100%) brightness(0.7) contrast(5000%) invert(100%);
+  filter: grayscale(1) invert(1) brightness(2);
+  /* Invert colors and boost brightness for cleaner white */
   mix-blend-mode: screen;
+  /* Hover: Hide inverted black background */
 }
 
 /* FA Icons handling */
@@ -649,6 +657,11 @@ section {
     display: block;
     padding: 10px 0;
     border-bottom: 1px solid #eee;
+  }
+
+  .mobile-menu {
+    max-height: 80vh;
+    overflow-y: auto;
   }
 }
 
@@ -1091,23 +1104,26 @@ section {
 
 /* Page Hero Section */
 .page-hero {
-  background-color: var(--primary-color);
-  /* Dark blue fallback */
-  color: var(--white);
-  padding: 80px 0;
-  margin-bottom: 60px;
+  background-color: #f8f9fa;
+  /* Light gray base */
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 15h2v10h-2V15zm-4 4h10v2h-10v-2z' fill='%23ff5e62' fill-opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  color: #0d2d62;
+  padding: 100px 0;
+  margin-bottom: 0;
   text-align: center;
   position: relative;
+  border-bottom: 1px solid #eee;
 }
 
 .page-hero h1 {
-  color: var(--white);
+  color: #0d2d62;
   margin-bottom: 15px;
   font-size: 42px;
 }
 
 .page-hero p {
-  color: rgba(255, 255, 255, 0.9);
+  color: #777;
   font-size: 18px;
   font-weight: 300;
 }
@@ -1117,10 +1133,10 @@ section {
 /* Updated Breadcrumbs Styles */
 .breadcrumbs-container {
   background-color: #ffffff;
-  padding: 0;
+  padding: 20px 0;
   border-bottom: 1px solid #eee;
   margin-bottom: 60px;
-  /* Space before content starts */
+  margin-top: 0;
 }
 
 .breadcrumbs {

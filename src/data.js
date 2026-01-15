@@ -1,11 +1,10 @@
 
 export const menuItems = [
-    { name: 'Home', link: '/' },
-    { name: 'About us', link: '#' },
-    { name: '진료과목', link: '#' },
-    { name: 'Timetable', link: '#' },
-    { name: 'Pages', link: '#' },
-    { name: 'Contacts', link: '#' },
+    { name: '홈', link: '/' },
+    { name: '병원소개', link: '/doctor' },
+    { name: '진료과목', link: '/departments' },
+    { name: '진료시간표', link: '/timetable' },
+    { name: '찾아오시는 길', link: '/contact' },
 ];
 
 export const heroSlider = { // Keep as fallback/alias if needed by other components, or just for the initial slide
@@ -19,19 +18,22 @@ export const heroSlides = [
         image: heroSlide1, // Updated image
         subtitle: "아픔의 원인을 봅니다. 과학적 진단으로 만나는 바른 한방 치료.",
         title: "바른 진단, 바른 치료!",
-        buttonText: "예약하기"
+        buttonText: "예약하기",
+        link: "https://booking.naver.com/booking/13/bizes/384022"
     },
     {
         image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2953&auto=format&fit=crop", // Hospital hallway/modern
         subtitle: "미국 초음파 의사협회 근골격계 인증의(RMSK) 자격 취득",
         title: "보이는 진단, 근거 있는 치료",
-        buttonText: "자세히 보기"
+        buttonText: "예약하기",
+        link: "https://booking.naver.com/booking/13/bizes/384022"
     },
     {
         image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2940&auto=format&fit=crop", // Medical staff/team
         subtitle: "객관적인 진단을 근거로 치료하는 신뢰할 수 있는 전문가",
         title: "끊임없는 연구, 당신의 아픔을 이해하는 깊이가 됩니다.",
-        buttonText: "자세히 보기"
+        buttonText: "예약하기",
+        link: "https://booking.naver.com/booking/13/bizes/384022"
     }
 ];
 
@@ -49,7 +51,7 @@ export const infoBar = {
         title: "Opening Hours",
         schedule: [
             { day: "월요일 - 금요일", time: "9.30 - 19.00" },
-            { day: "토요일", time: "10.00 - 12.00 (격주진료)" },
+            { day: "토요일", time: "10.00 - 12.00 (격주진료/예약필요)" },
             { day: "일요일/공휴일", time: "휴무" }
         ]
     },
@@ -57,7 +59,8 @@ export const infoBar = {
         title: "Doctors’ Timetable",
         text: "다음 내용은 진료 예약을 계획하는 데 도움이 되는 안내용입니다.",
         buttonText: "시간표 보기"
-    }
+    },
+    booking: "https://booking.naver.com/booking/13/bizes/384022"
 };
 
 
@@ -86,7 +89,7 @@ export const aboutClinic = {
 export const counters = [
     { value: 26, label: "Years of experience" },
     { value: 1, label: "Doctors in team" },
-    { value: 9000, label: "Happy patients" },
+    { value: 10000, label: "Happy patients" },
     { value: 9, label: "Medical Departments" },
 ];
 
@@ -101,15 +104,15 @@ import immuneIcon from './assets/icons/immune_v2.png';
 import injectionIcon from './assets/icons/dna_medicine_bottle.png';
 
 export const departments = [
-    { name: "SpineDisk", label: "척추/디스크", icon: spineIcon, type: 'image', link: "/departments/spine-disk" },
-    { name: "JointPain", label: "관절/관절염", icon: jointIcon, type: 'image', link: "/departments/joint-pain" },
-    { name: "Shoulder", label: "어깨", icon: shoulderIcon, type: 'image', link: "/departments/shoulder" },
-    { name: "MyofascialPain", label: "근막통증", icon: myofascialIcon, type: 'image', link: "/departments/myofascial-pain" },
-    { name: "Diet", label: "비만/다이어트", icon: obesityIcon, type: 'image', link: "/departments/diet" },
-    { name: "TrafficAccident", label: "교통사고치료", icon: trafficIcon, type: 'image', link: "/departments/traffic-accident" },
-    { name: "Respiratory", label: "호흡기", icon: respiratoryIcon, type: 'image', link: "/departments/respiratory" },
-    { name: "ImmuneBoosting", label: "면역부스팅", icon: immuneIcon, type: 'image', link: "/departments/immune-boosting" },
-    { name: "Injections", label: "약침요법", icon: injectionIcon, type: 'image', link: "/departments/injections" },
+    { name: "SpineDisk", label: "척추/디스크", icon: spineIcon, type: 'image', link: "/departments/spine-disk", description: "목/허리 디스크, 협착증, 만성 요통 등 척추 질환을 초음파 유도하 약침요법으로 근본 치료합니다." },
+    { name: "JointPain", label: "관절/관절염", icon: jointIcon, type: 'image', link: "/departments/joint-pain", description: "무릎, 고관절, 손가락 등 관절 염증과 통증을 잡고 주변 인대를 강화하여 기능을 회복시킵니다." },
+    { name: "Shoulder", label: "어깨/회전근개", icon: shoulderIcon, type: 'image', link: "/departments/shoulder", description: "오십견, 회전근개 파열, 석회성 건염 등 어깨 통증의 원인을 정확히 진단하여 해결합니다." },
+    { name: "MyofascialPain", label: "근막통증", icon: myofascialIcon, type: 'image', link: "/departments/myofascial-pain", description: "만성적인 근육 뭉침과 통증 유발점을 찾아 해결하고 전신의 균형을 바로잡습니다." },
+    { name: "Diet", label: "비만/다이어트", icon: obesityIcon, type: 'image', link: "/departments/diet", description: "개개인의 체질에 맞춘 한약 처방과 다이어트 프로그램을 통해 건강하고 요요 없는 체중 감량을 도와드립니다." },
+    { name: "TrafficAccident", label: "교통사고치료", icon: trafficIcon, type: 'image', link: "/departments/traffic-accident", description: "교통사고 후유증 방지를 위해 어혈을 제거하고 사고로 인한 근육과 인대의 손상을 빠르게 회복시킵니다." },
+    { name: "Respiratory", label: "호흡기/면역", icon: respiratoryIcon, type: 'image', link: "/departments/respiratory", description: "비염, 천식, 만성 기침 등 호흡기 질환과 떨어진 면역력을 강화하여 건강한 호흡을 되찾아드립니다." },
+    { name: "ImmuneBoosting", label: "면역부스팅", icon: immuneIcon, type: 'image', link: "/departments/immune-boosting", description: "기력 회복과 면역 강화를 위한 공진단, 경옥고 및 개인별 맞춤 보약으로 에너지를 충전합니다." },
+    { name: "Injections", label: "약침요법/초음파유도", icon: injectionIcon, type: 'image', link: "/departments/injections", description: "초음파를 통한 정밀한 진단을 바탕으로 환부의 정확한 위치에 약침을 주입하여 치료 효과를 극대화합니다." },
 ];
 
 export const latestNews = [
@@ -126,6 +129,7 @@ export const doctor = {
     email: "trustmeiamthedr@gmail.com",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop",
     quote: "“바른 진단이 바른 치료를 만듭니다.",
+    booking: "https://booking.naver.com/booking/13/bizes/384022",
     bio: "안녕하세요, 대표원장 성기원입니다. 좋은 치료란 무엇일까요? 저는 ‘내 몸을 정확히 아는 것’에서 시작한다고 생각합니다. 저희는 한방 전문의의 임상 경험과 RMSK(초음파 인증의)의 정밀한 진단을 결합하여, 통증의 원인과 몸의 불균형을 면밀히 파악합니다. 아픈 곳만 잠시 덮어두는 것이 아니라, 몸이 스스로 회복할 수 있는 힘을 길러드리는 것에 집중합니다. \n과잉 진료 없이, 꼭 필요한 치료만을 권해드리겠습니다. 믿고 찾을 수 있는 여러분의 평생 건강 파트너가 되겠습니다.",
     fullBio:
 

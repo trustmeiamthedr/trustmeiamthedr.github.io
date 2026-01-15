@@ -51,7 +51,7 @@ const Footer = () => {
                                     onMouseLeave={(e) => e.target.style.color = '#888'}
                                 >
                                     <i className="fa fa-angle-right" style={{ color: 'var(--secondary-color)', marginRight: '10px', fontWeight: 'bold' }}></i>
-                                    {dept.name}
+                                    {dept.label}
                                 </Link>
                             ))}
                         </div>

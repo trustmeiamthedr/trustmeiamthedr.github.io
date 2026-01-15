@@ -1,5 +1,6 @@
 import React from 'react';
 import { infoBar } from '../data';
+import { Link } from 'react-router-dom';
 
 const InfoBar = () => {
     return (
@@ -24,27 +25,15 @@ const InfoBar = () => {
                     <div className="info-col">
                         <h3 style={{ fontSize: '20px', marginBottom: '30px' }}>{infoBar.timetable.title}</h3>
                         <p style={{ marginBottom: '30px', opacity: '0.8', fontSize: '14px', lineHeight: '1.6' }}>{infoBar.timetable.text}</p>
-                        <a href="#" className="btn timetable-btn">{infoBar.timetable.buttonText}</a>
+                        <Link to="/timetable" className="btn timetable-btn">{infoBar.timetable.buttonText}</Link>
                     </div>
 
                     {/* Appointment Form */}
-                    <div className="info-col">
+                    <div className="info-col appointment-col">
                         <h3 style={{ fontSize: '20px', marginBottom: '30px' }}>진료 예약하기</h3>
-                        <form>
-                            <div style={{ marginBottom: '15px' }}>
-                                <select style={{ width: '100%', padding: '12px', border: '1px solid #e1e1e1', borderRadius: '4px', backgroundColor: '#fff', color: '#777' }}>
-                                    <option>Select a Department</option>
-                                    <option>Neurology</option>
-                                    <option>Dental</option>
-                                </select>
-                            </div>
-                            <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
-                                <input type="text" placeholder="Phone" style={{ flex: 1, padding: '12px', border: '1px solid #e1e1e1', borderRadius: '4px' }} />
-                            </div>
-                            <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
-                                <input type="email" placeholder="E-mail" style={{ flex: 1, padding: '12px', border: '1px solid #e1e1e1', borderRadius: '4px' }} />
-                                <button type="submit" className="btn timetable-btn" style={{ flex: 1, padding: '12px', fontSize: '12px' }}> MAKE AN APPOINTMENT</button>
-                            </div>
+                        <form style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                            <a href={infoBar.booking} target="_blank" rel="noopener noreferrer" className="btn" style={{ width: '100%', padding: '12px', fontSize: '15px', fontWeight: 'bold', backgroundColor: '#f1f1f1', color: '#333', border: 'none', borderRadius: '8px', textAlign: 'center', display: 'block' }}>네이버 예약하기</a>
+                            <a href="tel:0507-1362-7787" className="btn" style={{ width: '100%', padding: '12px', fontSize: '15px', fontWeight: 'bold', backgroundColor: '#f1f1f1', color: '#333', border: 'none', borderRadius: '8px', textAlign: 'center', display: 'block' }}>전화예약</a>
                         </form>
                     </div>
 

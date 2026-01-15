@@ -10,7 +10,7 @@ const Doctors = () => {
                 {/* Header */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
                     <h2 style={{ fontSize: '30px', color: '#333', margin: 0 }}>Our Doctors</h2>
-                    <Link to="/doctor-profile" className="btn-gray">VIEW DOCTOR PROFILE</Link>
+                    <Link to="/doctor" className="btn-gray">VIEW DOCTOR PROFILE</Link>
                 </div>
 
                 {/* Doctor Card */}

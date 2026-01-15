@@ -22,15 +22,21 @@ import PlacentaInjection from './pages/PlacentaInjection';
 import PdrnInjection from './pages/PdrnInjection';
 import NInjection from './pages/NInjection';
 import HydrodissectionPage from './pages/HydrodissectionPage';
+import ContactPage from './pages/ContactPage';
+import TimetablePage from './pages/TimetablePage';
+import DepartmentsPage from './pages/DepartmentsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/doctor-profile" element={<DoctorProfile />} />
+          <Route path="/doctor" element={<DoctorProfile />} />
+          <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/departments/spine-disk" element={<SpineDisk />} />
           <Route path="/departments/joint-pain" element={<JointPain />} />
           <Route path="/departments/shoulder" element={<Shoulder />} />
@@ -44,6 +50,8 @@ function App() {
           <Route path="/departments/injections/placenta" element={<PlacentaInjection />} />
           <Route path="/departments/injections/pdrn" element={<PdrnInjection />} />
           <Route path="/departments/injections/n-injection" element={<NInjection />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/timetable" element={<TimetablePage />} />
           <Route path="/departments/injections/hydrodissection" element={<HydrodissectionPage />} />
         </Routes>
         <Footer />

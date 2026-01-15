@@ -6,6 +6,7 @@ import logoImg from '../assets/images/logo_final.png';
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [mobileSubMenuOpen, setMobileSubMenuOpen] = useState(false);
 
     return (
         <>
@@ -38,9 +39,10 @@ const Header = () => {
                     <div className="logo" style={{ display: 'flex', alignItems: 'center', fontSize: '24px', fontWeight: 'bold', color: '#333' }}>
                         <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
                             <img src={logoImg} alt="MUKYO Logo" style={{ height: '100px', objectFit: 'contain', marginRight: '10px' }} />
-                            <span>
-                                {title.slice(0, -3)}
-                                <span style={{ color: 'var(--secondary-color)' }}>{title.slice(-3)}</span>
+                            <span style={{ fontSize: '24px' }}>
+                                <span style={{ color: '#6a0dad', fontWeight: 300 }}>{title.slice(0, 2)}</span>
+                                <span style={{ color: 'var(--accent-color)', fontWeight: 500 }}>{title.slice(2, -3)}</span>
+                                <span style={{ color: '#000', fontWeight: 300 }}>{title.slice(-3)}</span>
                             </span>
                         </Link>
                     </div>
@@ -88,11 +90,44 @@ const Header = () => {
                 {/* Mobile Menu Dropdown */}
                 {mobileMenuOpen && (
                     <div className="mobile-menu">
-                        {menuItems.map((item, index) => (
-                            <a key={index} href={item.link} className={`nav-link ${index === 0 ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
-                                {item.name}
-                            </a>
-                        ))}
+                        {menuItems.map((item, index) => {
+                            if (item.name === '진료과목') {
+                                return (
+                                    <div key={index}>
+                                        <div
+                                            className="nav-link"
+                                            style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
+                                            onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}
+                                        >
+                                            {item.name} <i className={`fa ${mobileSubMenuOpen ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
+                                        </div>
+                                        {mobileSubMenuOpen && (
+                                            <div className="mobile-submenu" style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px' }}>
+                                                {departments.map((dept, i) => (
+                                                    <Link
+                                                        key={i}
+                                                        to={dept.link || '#'}
+                                                        className="mobile-submenu-item"
+                                                        style={{ display: 'block', padding: '10px 0', fontSize: '14px', borderBottom: '1px solid #eee' }}
+                                                        onClick={() => {
+                                                            setMobileMenuOpen(false);
+                                                            setMobileSubMenuOpen(false);
+                                                        }}
+                                                    >
+                                                        {dept.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            }
+                            return (
+                                <a key={index} href={item.link} className={`nav-link ${index === 0 ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+                                    {item.name}
+                                </a>
+                            );
+                        })}
                     </div>
                 )}
             </div>

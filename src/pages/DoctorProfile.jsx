@@ -1,5 +1,6 @@
 import React from 'react';
 import { doctor } from '../data';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 function DoctorProfile() {
     return (
@@ -9,6 +10,7 @@ function DoctorProfile() {
                     <h1>{doctor.name}</h1>
                 </div>
             </div>
+            <Breadcrumbs title="About Us" />
 
             <div className="container profile-content">
                 <div className="doctor-image-section">

@@ -1,0 +1,245 @@
+/* TimetablePage.css */
+.timetable-container {
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timetable-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.timetable-header h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #333;
+    margin: 0;
+}
+
+.timetable-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.timetable-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.timetable-btn:hover {
+    background: #f5f5f5;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+/* Header Cells (Days of week) */
+.calendar-header-cell {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+}
+
+.calendar-header-cell.sunday {
+    color: #e74c3c;
+}
+
+.calendar-header-cell.saturday {
+    color: #3498db;
+}
+
+/* Day Cells */
+.calendar-day-cell {
+    min-height: 120px;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-number {
+    text-align: right;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.day-content {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Specific Day Styles */
+.calendar-day-cell.sunday .day-number {
+    color: #e74c3c;
+}
+
+.calendar-day-cell.saturday .day-number {
+    color: #3498db;
+}
+
+.calendar-day-cell.empty {
+    background-color: #f9f9f9;
+}
+
+.calendar-day-cell.today {
+    border: 3px solid var(--accent-color);
+    z-index: 2;
+    /* Ensure border is visible on top of neighbors */
+}
+
+/* Events / Info */
+.schedule-info {
+    margin-bottom: 4px;
+}
+
+.schedule-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.schedule-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.schedule-dot.open {
+    background-color: #f1c40f;
+    /* Yellowish */
+}
+
+.schedule-dot.closed {
+    background-color: #e74c3c;
+    /* Red */
+}
+
+.schedule-dot.blue {
+    background-color: #3498db;
+}
+
+.schedule-dot.green {
+    background-color: #2ecc71;
+}
+
+.schedule-text {
+    font-weight: 500;
+}
+
+.schedule-time {
+    color: #888;
+    font-size: 12px;
+    margin-left: auto;
+    /* Push time to right if needed, or just standard flow */
+    display: block;
+}
+
+/* Holiday Badge */
+.holiday-badge {
+    display: inline-block;
+    background-color: #eacdf3;
+    /* Light purple from image */
+    color: #555;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+/* Helper for "Other days" filler if needed */
+.other-month {
+    color: #ccc;
+    background-color: #fcfcfc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timetable-header h2 {
+        font-size: 24px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: 1fr;
+        /* Stack on very small screens? Or keeping 7 cols is better? */
+        /* Actually on mobile 7 cols is too tight. Let's try 7 cols but small text, or switch to list.
+           The user asked for responsive. 7 cols on mobile is very hard. 
+           Let's use a standard trick: keep headers but condense content, or full stack.
+           Better approach for calendar: Keep it scrollable horizontally or stack it.
+           Let's try to keep 7 cols but reduce padding and font size first, if that fails, stack.
+           Actually, the image shows a desktop view. */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calendar-header-cell {
+        display: none;
+        /* Hide standard headers in list view */
+    }
+
+    .calendar-day-cell {
+        min-height: auto;
+        border-left: 1px solid #ddd;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .day-number {
+        margin-bottom: 0;
+        margin-right: 15px;
+        width: 30px;
+        text-align: center;
+    }
+
+    .day-content {
+        text-align: right;
+    }
+
+    .calendar-day-cell.empty {
+        display: none;
+        /* Hide empty cells in list view */
+    }
+
+    /* Re-add day name for list view */
+    .day-number::after {
+        content: attr(data-dayname);
+        display: block;
+        font-size: 10px;
+        color: #999;
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* Ensure grid is grid */
+    .calendar-grid {
+        display: grid;
+    }
+}
