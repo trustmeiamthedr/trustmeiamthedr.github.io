@@ -58,9 +58,9 @@ const Header = () => {
                             if (item.name === '진료과목') {
                                 return (
                                     <div key={index} className="dropdown-container">
-                                        <a href={item.link} className="nav-link" style={{ display: 'flex', alignItems: 'center' }}>
+                                        <Link to={item.link} className="nav-link" style={{ display: 'flex', alignItems: 'center' }}>
                                             {item.name} <i className="fa fa-angle-down" style={{ marginLeft: '5px', fontSize: '12px' }}></i>
-                                        </a>
+                                        </Link>
                                         <div className="dropdown-menu">
                                             {departments.map((dept, i) => (
                                                 <Link key={i} to={dept.link || '#'} className="dropdown-item">
@@ -73,9 +73,9 @@ const Header = () => {
                             }
 
                             return (
-                                <a key={index} href={item.link} className={`nav-link ${index === 0 ? 'active' : ''}`}>
+                                <Link key={index} to={item.link} className={`nav-link ${index === 0 ? 'active' : ''}`}>
                                     {item.name}
-                                </a>
+                                </Link>
                             );
                         })}
 
@@ -123,9 +123,9 @@ const Header = () => {
                                 );
                             }
                             return (
-                                <a key={index} href={item.link} className={`nav-link ${index === 0 ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+                                <Link key={index} to={item.link} className={`nav-link ${index === 0 ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}>
                                     {item.name}
-                                </a>
+                                </Link>
                             );
                         })}
                     </div>
