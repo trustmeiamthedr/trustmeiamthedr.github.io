@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -26,15 +26,34 @@ import ContactPage from './pages/ContactPage';
 import TimetablePage from './pages/TimetablePage';
 import DepartmentsPage from './pages/DepartmentsPage';
 import ScrollToTop from './components/ScrollToTop';
+import Preloader from './components/Preloader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    // Initial loading time (e.g., 2 seconds)
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      // Wait for fade out animation to complete
+      setTimeout(() => {
+        setLoading(false);
+      }, 800);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
+      {loading && <Preloader fadeOut={fadeOut} />}
       <ScrollToTop />
       <div className="App">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/doctor" element={<DoctorProfile />} />
           <Route path="/departments" element={<DepartmentsPage />} />
           <Route path="/departments/spine-disk" element={<SpineDisk />} />
