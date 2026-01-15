@@ -8,44 +8,44 @@ const Footer = () => {
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: '40px' }}>
 
                     {/* Column 1: Contact Us */}
-                    <div style={{ flex: '1', minWidth: '250px' }}>
-                        <div style={{ marginBottom: '30px', borderBottom: '1px solid #ddd', paddingBottom: '15px', position: 'relative' }}>
+                    <div className="footer-column" style={{ flex: '1', minWidth: '250px' }}>
+                        <div className="footer-header" style={{ marginBottom: '30px', borderBottom: '1px solid #ddd', paddingBottom: '15px', position: 'relative' }}>
                             <h3 style={{ fontSize: '14px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', margin: 0, color: '#333' }}>Contact Us</h3>
-                            <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
+                            <div className="footer-header-line" style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit' }}>
                             <i className="fa-solid fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.phone}</span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'inherit' }}>
                             <i className="fa-solid fa-envelope" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.email}</span>
                         </div>
                     </div>
 
                     {/* Column 2: Clinic Address */}
-                    <div style={{ flex: '1', minWidth: '250px' }}>
-                        <div style={{ marginBottom: '30px', borderBottom: '1px solid #ddd', paddingBottom: '15px', position: 'relative' }}>
+                    <div className="footer-column" style={{ flex: '1', minWidth: '250px' }}>
+                        <div className="footer-header" style={{ marginBottom: '30px', borderBottom: '1px solid #ddd', paddingBottom: '15px', position: 'relative' }}>
                             <h3 style={{ fontSize: '14px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', margin: 0, color: '#333' }}>Clinic Address</h3>
-                            <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
+                            <div className="footer-header-line" style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'start', marginBottom: '15px' }}>
-                            <i className="fa-solid fa-location-dot" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '20px', marginTop: '-3px' }}></i>
+                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit' }}>
+                            <i className="fa-solid fa-location-dot" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '20px' }}></i>
                             <span style={{ lineHeight: '1.6' }}>{contact.address}</span>
                         </div>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'inherit' }}>
                             <i className="fa-solid fa-id-card" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '500' }}>사업자등록번호 211-90-72503</span>
                         </div>
                     </div>
 
                     {/* Column 3: Our Departments */}
-                    <div style={{ flex: '2', minWidth: '300px' }}>
-                        <div style={{ marginBottom: '30px', borderBottom: '1px solid #ddd', paddingBottom: '15px', position: 'relative' }}>
+                    <div className="footer-column" style={{ flex: '2', minWidth: '300px' }}>
+                        <div className="footer-header" style={{ marginBottom: '30px', borderBottom: '1px solid #ddd', paddingBottom: '15px', position: 'relative' }}>
                             <h3 style={{ fontSize: '14px', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', margin: 0, color: '#333' }}>Our Departments</h3>
-                            <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
+                            <div className="footer-header-line" style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
                         </div>
 
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px 30px' }}>

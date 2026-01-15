@@ -619,6 +619,19 @@ section {
     text-align: center;
   }
 
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-header-line {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
   footer .col {
     width: 100%;
     margin-bottom: 40px;
