@@ -15,11 +15,11 @@ const Footer = () => {
                         </div>
 
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                            <i className="fa fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
+                            <i className="fa-solid fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.phone}</span>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <i className="fa fa-envelope-o" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
+                            <i className="fa-solid fa-envelope" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.email}</span>
                         </div>
                     </div>
@@ -31,9 +31,13 @@ const Footer = () => {
                             <div style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'start' }}>
-                            <i className="fa fa-map-marker" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '20px', marginTop: '-3px' }}></i>
+                        <div style={{ display: 'flex', alignItems: 'start', marginBottom: '15px' }}>
+                            <i className="fa-solid fa-location-dot" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '20px', marginTop: '-3px' }}></i>
                             <span style={{ lineHeight: '1.6' }}>{contact.address}</span>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <i className="fa-solid fa-id-card" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
+                            <span style={{ fontWeight: '500' }}>사업자등록번호 211-90-72503</span>
                         </div>
                     </div>
 
@@ -50,7 +54,7 @@ const Footer = () => {
                                     onMouseEnter={(e) => e.target.style.color = 'var(--secondary-color)'}
                                     onMouseLeave={(e) => e.target.style.color = '#888'}
                                 >
-                                    <i className="fa fa-angle-right" style={{ color: 'var(--secondary-color)', marginRight: '10px', fontWeight: 'bold' }}></i>
+                                    <i className="fa-solid fa-angle-right" style={{ color: 'var(--secondary-color)', marginRight: '10px', fontWeight: 'bold' }}></i>
                                     {dept.label}
                                 </Link>
                             ))}
@@ -65,14 +69,14 @@ const Footer = () => {
             < div style={{ borderTop: '1px solid #e1e4e6', marginTop: '60px', paddingTop: '30px', backgroundColor: '#e9eef2', padding: '30px 0' }}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div style={{ color: '#888', fontSize: '14px' }}>
-                        Health © 2025. <a href="#" style={{ color: '#888', textDecoration: 'underline' }}>Privacy Policy</a>
+                        ©2014-2026 KH Mukyoro Medical Clinic <a href="#" style={{ color: '#888', textDecoration: 'underline' }}>Privacy Policy</a>
                     </div>
-                    <div className="social-icons" style={{ display: 'flex', gap: '15px' }}>
+                    {/* <div className="social-icons" style={{ display: 'flex', gap: '15px' }}>
                         <a href="#" style={{ color: '#333' }}><i className="fa fa-facebook"></i></a>
                         <a href="#" style={{ color: '#333' }}><i className="fa fa-twitter"></i></a>
                         <a href="#" style={{ color: '#333' }}><i className="fa fa-google-plus"></i></a>
                         <a href="#" style={{ color: '#333' }}><i className="fa fa-pinterest-p"></i></a>
-                    </div>
+                    </div> */}
                 </div>
             </div >
         </footer >

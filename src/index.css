@@ -18,12 +18,14 @@
   padding: 0;
 }
 
+html,
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--text-color);
   line-height: 1.6;
   background-color: var(--white);
   overflow-x: hidden;
+  width: 100%;
 }
 
 h1,
@@ -142,6 +144,11 @@ ul {
   animation-name: fadeInUp;
   animation-duration: 0.8s;
   animation-fill-mode: both;
+}
+
+.App {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 @keyframes slideInRight {
