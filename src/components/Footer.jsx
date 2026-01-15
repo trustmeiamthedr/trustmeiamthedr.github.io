@@ -14,14 +14,20 @@ const Footer = () => {
                             <div className="footer-header-line" style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit' }}>
+                        <a href={`tel:${contact.phone}`} style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit', color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--secondary-color)'}
+                            onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}
+                        >
                             <i className="fa-solid fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.phone}</span>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'inherit' }}>
+                        </a>
+                        <a href={`mailto:${contact.email}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'inherit', color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--secondary-color)'}
+                            onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}
+                        >
                             <i className="fa-solid fa-envelope" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.email}</span>
-                        </div>
+                        </a>
                     </div>
 
                     {/* Column 2: Clinic Address */}
@@ -31,10 +37,13 @@ const Footer = () => {
                             <div className="footer-header-line" style={{ position: 'absolute', bottom: '-1px', left: 0, width: '50px', height: '2px', backgroundColor: 'var(--secondary-color)' }}></div>
                         </div>
 
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit' }}>
+                        <Link to="/contact" style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit', color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--secondary-color)'}
+                            onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}
+                        >
                             <i className="fa-solid fa-location-dot" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '20px' }}></i>
                             <span style={{ lineHeight: '1.6' }}>{contact.address}</span>
-                        </div>
+                        </Link>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'inherit' }}>
                             <i className="fa-solid fa-id-card" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '500' }}>사업자등록번호 211-90-72503</span>

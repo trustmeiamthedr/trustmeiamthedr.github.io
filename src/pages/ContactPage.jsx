@@ -142,7 +142,7 @@ const ContactPage = () => {
                         <div>
                             <div style={styles.infoBox}>
                                 <h2 style={styles.infoTitle}>
-                                    <i className="fa fa-map-marker"></i> Location
+                                    <i className="fa-solid fa-location-dot"></i> Location
                                 </h2>
                                 <p style={styles.infoContent}>
                                     {contact.address} <br />
@@ -152,7 +152,7 @@ const ContactPage = () => {
 
                             <div style={styles.infoBox}>
                                 <h2 style={styles.infoTitle}>
-                                    <i className="fa fa-phone"></i> Contact
+                                    <i className="fa-solid fa-phone"></i> Contact
                                 </h2>
                                 <p style={styles.infoContent}>
                                     전화: {contact.phone} <br />
@@ -162,7 +162,7 @@ const ContactPage = () => {
 
                             <div style={styles.infoBox}>
                                 <h2 style={styles.infoTitle}>
-                                    <i className="fa fa-clock-o"></i> Hours
+                                    <i className="fa-solid fa-clock"></i> Hours
                                 </h2>
                                 <p style={styles.infoContent}>
                                     평일: 9:30 AM - 7:00 PM <br />
@@ -175,12 +175,12 @@ const ContactPage = () => {
                         {/* Column 2: Directions */}
                         <div>
                             <h2 style={styles.infoTitle}>
-                                <i className="fa fa-compass"></i> Directions
+                                <i className="fa-solid fa-compass"></i> Directions
                             </h2>
 
                             <div style={styles.directionItem}>
                                 <h3 style={styles.directionTitle}>
-                                    <i className="fa fa-subway" style={{ color: '#0052A4' }}></i> 지하철 이용 시
+                                    <i className="fa-solid fa-train-subway" style={{ color: '#0052A4' }}></i> 지하철 이용 시
                                 </h3>
                                 <div style={styles.infoContent}>
                                     <p style={{ marginBottom: '10px' }}>
@@ -197,7 +197,7 @@ const ContactPage = () => {
 
                             <div style={styles.directionItem}>
                                 <h3 style={styles.directionTitle}>
-                                    <i className="fa fa-bus" style={{ color: '#ff5e62' }}></i> 버스 이용 시
+                                    <i className="fa-solid fa-bus" style={{ color: '#ff5e62' }}></i> 버스 이용 시
                                 </h3>
                                 <div style={styles.infoContent}>
                                     <p>서울시청, 국가인권위, 무교동 정류장 하차</p>
@@ -210,7 +210,7 @@ const ContactPage = () => {
 
                             <div style={styles.directionItem}>
                                 <h3 style={styles.directionTitle}>
-                                    <i className="fa fa-car" style={{ color: '#333' }}></i> 자가용 및 주차
+                                    <i className="fa-solid fa-car" style={{ color: '#333' }}></i> 자가용 및 주차
                                 </h3>
                                 <div style={styles.infoContent}>
                                     <p>네비게이션: '대한체육회' 또는 '무교로 16' 검색</p>

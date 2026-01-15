@@ -26,12 +26,12 @@ const Doctors = () => {
                             <div className="doctor-exp">{doctor.experience}</div>
 
                             <div className="doctor-phone">
-                                <i className="fa fa-phone"></i>
+                                <i className="fa-solid fa-phone"></i>
                                 {doctor.phone}
                             </div>
 
                             <div className="quote-icon">
-                                <i className="fa fa-quote-left"></i>
+                                <i className="fa-solid fa-quote-left"></i>
                             </div>
                             <div className="doctor-greeting">
                                 {doctor.quote}

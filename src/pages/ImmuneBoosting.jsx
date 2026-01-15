@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import gongjindanImg from '../assets/images/gongjindan_premium.jpg';
 import kyungokgoImg from '../assets/images/kyungokgo_premium.jpg';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const ImmuneBoosting = () => {
     useEffect(() => {
@@ -184,6 +185,8 @@ const ImmuneBoosting = () => {
                     <p style={styles.heroSubtitle}>수많은 환자분들이 입증한 놀라운 효과, 공진단 & 경옥고</p>                </div>
             </header>
 
+            <Breadcrumbs deptName="면역강화클리닉" />
+
             {/* Social Proof */}
             <section style={{ ...styles.section, ...styles.socialProof }}>
                 <div style={styles.container}>
@@ -191,17 +194,17 @@ const ImmuneBoosting = () => {
                     <p style={{ color: '#666' }}>임상으로 입증된 효과와 정성스러운 처방</p>
                     <div style={styles.proofGrid}>
                         <div style={styles.proofItem}>
-                            <i className="fa fa-stethoscope" style={styles.proofIcon}></i>
+                            <i className="fa-solid fa-stethoscope" style={styles.proofIcon}></i>
                             <h3>임상으로 입증된 효과</h3>
                             <p>수많은 처방 사례와 호전 반응이 증명합니다.</p>
                         </div>
                         <div style={styles.proofItem}>
-                            <i className="fa fa-users" style={styles.proofIcon}></i>
+                            <i className="fa-solid fa-users" style={styles.proofIcon}></i>
                             <h3>높은 재처방률</h3>
                             <p>효과를 보신 분들이 가족과 지인에게 다시 권합니다.</p>
                         </div>
                         <div style={styles.proofItem}>
-                            <i className="fa fa-leaf" style={styles.proofIcon}></i>
+                            <i className="fa-solid fa-leaf" style={styles.proofIcon}></i>
                             <h3>엄선된 정품 약재</h3>
                             <p>식약처 인증을 받은 최상급 정품 약재만을 사용합니다.</p>
                         </div>
@@ -232,9 +235,9 @@ const ImmuneBoosting = () => {
                                 <span style={{ ...styles.tag, color: '#d4af37' }}>#수험생추천</span>
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0 }}>
-                                <li style={{ marginBottom: '10px' }}><i className="fa fa-check" style={{ color: '#d4af37', marginRight: '10px' }}></i>중풍/치매가 걱정되는 노년층</li>
-                                <li style={{ marginBottom: '10px' }}><i className="fa fa-check" style={{ color: '#d4af37', marginRight: '10px' }}></i>만성 피로에 시달리는 직장인</li>
-                                <li style={{ marginBottom: '10px' }}><i className="fa fa-check" style={{ color: '#d4af37', marginRight: '10px' }}></i>집중력이 필요한 수험생</li>
+                                <li style={{ marginBottom: '10px' }}><i className="fa-solid fa-check" style={{ color: '#d4af37', marginRight: '10px' }}></i>중풍/치매가 걱정되는 노년층</li>
+                                <li style={{ marginBottom: '10px' }}><i className="fa-solid fa-check" style={{ color: '#d4af37', marginRight: '10px' }}></i>만성 피로에 시달리는 직장인</li>
+                                <li style={{ marginBottom: '10px' }}><i className="fa-solid fa-check" style={{ color: '#d4af37', marginRight: '10px' }}></i>집중력이 필요한 수험생</li>
                             </ul>
                         </div>
                     </div>
@@ -264,9 +267,9 @@ const ImmuneBoosting = () => {
                                 <span style={{ ...styles.tag, color: '#c27a28' }}>#온가족보약</span>
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0 }}>
-                                <li style={{ marginBottom: '10px' }}><i className="fa fa-check" style={{ color: '#c27a28', marginRight: '10px' }}></i>기력이 쇠한 어르신</li>
-                                <li style={{ marginBottom: '10px' }}><i className="fa fa-check" style={{ color: '#c27a28', marginRight: '10px' }}></i>갱년기 여성</li>
-                                <li style={{ marginBottom: '10px' }}><i className="fa fa-check" style={{ color: '#c27a28', marginRight: '10px' }}></i>허약한 어린이 및 마른 기침 환자</li>
+                                <li style={{ marginBottom: '10px' }}><i className="fa-solid fa-check" style={{ color: '#c27a28', marginRight: '10px' }}></i>기력이 쇠한 어르신</li>
+                                <li style={{ marginBottom: '10px' }}><i className="fa-solid fa-check" style={{ color: '#c27a28', marginRight: '10px' }}></i>갱년기 여성</li>
+                                <li style={{ marginBottom: '10px' }}><i className="fa-solid fa-check" style={{ color: '#c27a28', marginRight: '10px' }}></i>허약한 어린이 및 마른 기침 환자</li>
                             </ul>
                         </div>
                     </div>
@@ -283,20 +286,20 @@ const ImmuneBoosting = () => {
                         {/* Gongjindan Card */}
                         <div style={styles.card}>
                             <div style={styles.cardHeader}>
-                                <i className="fa fa-crown" style={{ color: '#d4af37', fontSize: '1.5rem' }}></i>
+                                <i className="fa-solid fa-crown" style={{ color: '#d4af37', fontSize: '1.5rem' }}></i>
                                 <h3 style={{ ...styles.cardTitle, color: '#d4af37' }}>공진단</h3>
                             </div>
                             <ul style={styles.cardList}>
                                 <li style={styles.cardListItem}>
-                                    <i className="fa fa-bolt" style={{ color: '#d4af37', marginTop: '5px' }}></i>
+                                    <i className="fa-solid fa-bolt" style={{ color: '#d4af37', marginTop: '5px' }}></i>
                                     <span><strong>#급속회복 #강력함</strong><br />신속한 원기 회복이 필요할 때</span>
                                 </li>
                                 <li style={styles.cardListItem}>
-                                    <i className="fa fa-user-graduate" style={{ color: '#d4af37', marginTop: '5px' }}></i>
+                                    <i className="fa-solid fa-user-graduate" style={{ color: '#d4af37', marginTop: '5px' }}></i>
                                     <span>수험생, CEO, 만성피로 직장인</span>
                                 </li>
                                 <li style={styles.cardListItem}>
-                                    <i className="fa fa-brain" style={{ color: '#d4af37', marginTop: '5px' }}></i>
+                                    <i className="fa-solid fa-brain" style={{ color: '#d4af37', marginTop: '5px' }}></i>
                                     <span>뇌 건강 증진 및 간 기능 보호</span>
                                 </li>
                             </ul>
@@ -305,20 +308,20 @@ const ImmuneBoosting = () => {
                         {/* Kyungokgo Card */}
                         <div style={styles.card}>
                             <div style={styles.cardHeader}>
-                                <i className="fa fa-leaf" style={{ color: '#c27a28', fontSize: '1.5rem' }}></i>
+                                <i className="fa-solid fa-leaf" style={{ color: '#c27a28', fontSize: '1.5rem' }}></i>
                                 <h3 style={{ ...styles.cardTitle, color: '#c27a28' }}>경옥고</h3>
                             </div>
                             <ul style={styles.cardList}>
                                 <li style={styles.cardListItem}>
-                                    <i className="fa fa-sync" style={{ color: '#c27a28', marginTop: '5px' }}></i>
+                                    <i className="fa-solid fa-arrows-rotate" style={{ color: '#c27a28', marginTop: '5px' }}></i>
                                     <span><strong>#은근한보충 #꾸준함</strong><br />장기적인 면역 관리가 필요할 때</span>
                                 </li>
                                 <li style={styles.cardListItem}>
-                                    <i className="fa fa-users" style={{ color: '#c27a28', marginTop: '5px' }}></i>
+                                    <i className="fa-solid fa-users" style={{ color: '#c27a28', marginTop: '5px' }}></i>
                                     <span>남녀노소, 어르신, 갱년기 여성</span>
                                 </li>
                                 <li style={styles.cardListItem}>
-                                    <i className="fa fa-lungs" style={{ color: '#c27a28', marginTop: '5px' }}></i>
+                                    <i className="fa-solid fa-lungs" style={{ color: '#c27a28', marginTop: '5px' }}></i>
                                     <span>호흡기 계통 보호 및 노화 방지</span>
                                 </li>
                             </ul>

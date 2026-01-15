@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import mainHeroImg from '../assets/images/injections_main_hero.png';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const Injections = () => {
     useEffect(() => {
@@ -95,6 +96,8 @@ const Injections = () => {
                 </div>
             </header>
 
+            <Breadcrumbs deptName="약침치료클리닉" />
+
             {/* Injections List */}
             <section style={styles.section}>
                 <div style={styles.container}>
@@ -110,7 +113,7 @@ const Injections = () => {
                         {/* Placenta Injection */}
                         <div style={styles.card}>
                             <div style={styles.cardContent}>
-                                <i className="fa fa-leaf" style={{ ...styles.icon, color: '#8B0000' }}></i>
+                                <i className="fa-solid fa-leaf" style={{ ...styles.icon, color: '#8B0000' }}></i>
                                 <h3 style={styles.cardTitle}>태반약침 (Placenta Injection)</h3>
                                 <p style={styles.cardDesc}>
                                     천연 태반 성분을 이용하여 간 기능 개선, 만성 피로 회복, 갱년기 증상 완화 및 항노화 효과를 제공합니다.
@@ -128,7 +131,7 @@ const Injections = () => {
                         {/* PDRN Injection */}
                         <div style={styles.card}>
                             <div style={styles.cardContent}>
-                                <i className="fa fa-dna" style={{ ...styles.icon, color: '#2196f3' }}></i>
+                                <i className="fa-solid fa-dna" style={{ ...styles.icon, color: '#2196f3' }}></i>
                                 <h3 style={styles.cardTitle}>PDRN 약침 (DNA Injection)</h3>
                                 <p style={styles.cardDesc}>
                                     인체 DNA와 유사한 성분을 손상된 조직에 주입하여 세포 재생을 촉진하고 염증을 줄여줍니다.
@@ -146,7 +149,7 @@ const Injections = () => {
                         {/* N Injection */}
                         <div style={styles.card}>
                             <div style={styles.cardContent}>
-                                <i className="fa fa-heartbeat" style={{ ...styles.icon, color: '#7b1fa2' }}></i>
+                                <i className="fa-solid fa-heart-pulse" style={{ ...styles.icon, color: '#7b1fa2' }}></i>
                                 <h3 style={styles.cardTitle}>N 약침 (산화질소Nitro Oxide)</h3>
                                 <p style={styles.cardDesc}>
                                     천연 한약재 추출 성분으로 혈관을 확장하고 혈액 순환을 개선하여 신체의 흐름을 원활하게 합니다.
@@ -164,7 +167,7 @@ const Injections = () => {
                         {/* Hydrodissection Injection */}
                         <div style={styles.card}>
                             <div style={styles.cardContent}>
-                                <i className="fa fa-crosshairs" style={{ ...styles.icon, color: '#0d2d62' }}></i>
+                                <i className="fa-solid fa-crosshairs" style={{ ...styles.icon, color: '#0d2d62' }}></i>
                                 <h3 style={styles.cardTitle}>초음파 유도하 하이드로다이섹션</h3>
                                 <p style={styles.cardDesc}>
                                     초음파로 병변을 직접 보며 약침으로 신경 유착을 박리하는 비수술적 치료입니다.

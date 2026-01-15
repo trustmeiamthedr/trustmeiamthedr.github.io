@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import heroImg from '../assets/images/pdrn_hero.png';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const PdrnInjection = () => {
     useEffect(() => {
@@ -174,27 +175,29 @@ const PdrnInjection = () => {
                 </div>
             </div>
 
+            <Breadcrumbs deptName="약침치료클리닉" subDeptName="PDRN약침" />
+
             {/* 2. Key Selling Points */}
             <section style={styles.section}>
                 <div style={styles.container}>
                     <div style={styles.grid3}>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.accentPink }}>
-                                <i className="fa fa-dna"></i>
+                                <i className="fa-solid fa-dna"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>천연물 성분</h3>
                             <p style={{ color: '#666' }}>연어에서 추출한 천연 DNA 성분으로 인체 유사도가 95%에 달합니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.primaryBlue }}>
-                                <i className="fa fa-shield-alt"></i>
+                                <i className="fa-solid fa-shield-halved"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>안전하고 무해함</h3>
                             <p style={{ color: '#666' }}>내성이 없고 체내 부작용이 거의 없는 안전한 성분입니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.accentPink }}>
-                                <i className="fa fa-plus-circle"></i>
+                                <i className="fa-solid fa-circle-plus"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>항염증 및 조직재생</h3>
                             <p style={{ color: '#666' }}>염증을 줄이고 손상된 인대와 조직을 튼튼하게 재생합니다.</p>
@@ -243,14 +246,14 @@ const PdrnInjection = () => {
                                     "스테로이드 없는 안전한 치료를 원하시는 분"
                                 ].map((item, i) => (
                                     <li key={i} style={styles.checklistItem}>
-                                        <i className="fa fa-check-square" style={{ color: colors.primaryBlue, marginRight: '15px', fontSize: '1.5rem' }}></i>
+                                        <i className="fa-solid fa-square-check" style={{ color: colors.primaryBlue, marginRight: '15px', fontSize: '1.5rem' }}></i>
                                         {item}
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div style={{ flex: 1, backgroundColor: colors.bgLight, padding: '40px', borderRadius: '20px', textAlign: 'center' }}>
-                            <i className="fa fa-user-md" style={{ fontSize: '5rem', color: colors.accentPink, marginBottom: '20px' }}></i>
+                            <i className="fa-solid fa-user-doctor" style={{ fontSize: '5rem', color: colors.accentPink, marginBottom: '20px' }}></i>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>전문의 상담 필수</h3>
                             <p style={{ color: '#666' }}>
                                 PDRN 약침는 정확한 진단 후 손상 부위에 정확하게 주입해야 최고의 효과를 낼 수 있습니다.
@@ -270,7 +273,7 @@ const PdrnInjection = () => {
                             <div key={index} style={styles.faqItem}>
                                 <button style={styles.faqQuestion} onClick={() => toggleFaq(index)}>
                                     <span style={{ flex: 1 }}>Q. {faq.q}</span>
-                                    <i className={`fa fa-chevron-${openFaq === index ? 'up' : 'down'}`} style={{ color: colors.primaryBlue }}></i>
+                                    <i className={`fa-solid fa-chevron-${openFaq === index ? 'up' : 'down'}`} style={{ color: colors.primaryBlue }}></i>
                                 </button>
                                 {openFaq === index && (
                                     <div style={styles.faqAnswer}>

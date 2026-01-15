@@ -102,8 +102,8 @@ const Departments = () => {
                     <h2 style={{ fontSize: '30px', color: '#333', margin: 0 }}>Departments</h2>
 
                     <div className="header-controls" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                        <div className="control-btn" onClick={prevSlide}><i className="fa fa-angle-left"></i></div>
-                        <div className="control-btn" onClick={nextSlide}><i className="fa fa-angle-right"></i></div>
+                        <div className="control-btn" onClick={prevSlide}><i className="fa-solid fa-angle-left"></i></div>
+                        <div className="control-btn" onClick={nextSlide}><i className="fa-solid fa-angle-right"></i></div>
                         <Link to="/departments" className="btn-gray" style={{ marginLeft: '10px' }}>ALL DEPARTMENTS</Link>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ const Departments = () => {
                                                     }}
                                                 />
                                             ) : (
-                                                <i className={`fa ${dept.icon}`}></i>
+                                                <i className={`fa-solid ${dept.icon}`}></i>
                                             )}
                                         </div>
                                         <h4 style={{ fontSize: '16px', fontWeight: '500', color: '#333' }}>{dept.label}</h4>

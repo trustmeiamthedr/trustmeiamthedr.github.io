@@ -27,13 +27,13 @@ function DoctorProfile() {
                         <h2>{doctor.name}</h2>
                         <span className="specialty-badge">{doctor.specialty}</span>
                         <div className="utility-bar">
-                            <a href={`tel:${doctor.phone}`} className="contact-link"><i className="fa fa-phone"></i> {doctor.phone}</a>
-                            <a href={`mailto:${doctor.email}`} className="contact-link"><i className="fa fa-envelope"></i> {doctor.email}</a>
+                            <a href={`tel:${doctor.phone}`} className="contact-link"><i className="fa-solid fa-phone"></i> {doctor.phone}</a>
+                            <a href={`mailto:${doctor.email}`} className="contact-link"><i className="fa-solid fa-envelope"></i> {doctor.email}</a>
                         </div>
                     </div>
 
                     <div className="quote-box">
-                        <i className="fa fa-quote-left quote-icon"></i>
+                        <i className="fa-solid fa-quote-left quote-icon"></i>
                         <p className="quote-text">{doctor.quote}</p>
                     </div>
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { latestNews } from '../data';
 
 const News = () => {
@@ -15,13 +17,16 @@ const News = () => {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '30px' }}>
                     {latestNews.map((news, index) => (
                         <div key={index} className="news-item" style={{ flex: '1', minWidth: '300px' }}>
-                            <div className="news-item-img">
-                                <img src={news.image} alt={news.title} />
-                            </div>
+                            <Link to={news.link || '#'} className="news-item-img" style={{ display: 'block', overflow: 'hidden' }}>
+                                <img src={news.image} alt={news.title} style={{ width: '100%', display: 'block', transition: 'transform 0.3s' }}
+                                    onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+                                    onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+                                />
+                            </Link>
                             <div className="news-item-content">
                                 <div style={{ fontSize: '12px', color: '#ff5e62', textTransform: 'uppercase', marginBottom: '10px', fontWeight: 'bold' }}>{news.date}</div>
                                 <h3 style={{ fontSize: '20px', marginBottom: '15px' }}>
-                                    <a href="#" style={{ color: '#333' }}>{news.title}</a>
+                                    <Link to={news.link || '#'} style={{ color: '#333' }}>{news.title}</Link>
                                 </h3>
                                 <p style={{ color: '#777', fontSize: '14px', lineHeight: '1.6', marginBottom: '20px' }}>
                                     {news.text}

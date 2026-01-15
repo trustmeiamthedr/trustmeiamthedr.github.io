@@ -72,6 +72,12 @@ import coloredCertificate from './assets/icons/colored_certificate.png';
 import rmskIcon from './assets/icons/rmsk_badge.png';
 import heartIcon from './assets/icons/heart_care.png';
 import heroSlide1 from './assets/images/hero_slide_1_v2.jpg';
+import pdrnHero from './assets/images/pdrn_hero.png';
+import hydroHero from './assets/images/hydro_carpal.png';
+import gongjindanHero from './assets/images/gongjindan_premium.jpg';
+
+
+
 
 export const features = [
     { icon: doctorIcon, type: 'image', title: "풍부한 임상 경험", text: "풍부한 임상 경험을 바탕으로 꼭 필요한 진료만을 제안합니다." },
@@ -116,9 +122,12 @@ export const departments = [
 ];
 
 export const latestNews = [
-    { title: "Researchers found a new way to treat back pain", date: "June 21, 2022", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop", text: "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar." },
-    { title: "A new study reveals the benefits of daily walking", date: "June 25, 2022", image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop", text: "The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way." },
-    { title: "How to maintain a healthy diet during pregnancy", date: "July 02, 2022", image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop", text: "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek." }
+    { title: "DNA 에너지로 조직을 재생하는 PDRN 약침", date: "Jan 15, 2026", image: pdrnHero, text: "연어에서 추출한 천연 DNA 성분으로 염증 감소와 조직 재생을 동시에 해결하는 근본적인 치료입니다. 내성이 없고 안전한 PDRN 요법을 만나보세요.", link: "/departments/injections/pdrn" },
+
+    { title: "초음파 유도하 하이드로다이섹션(Hydrodissection)", date: "Jan 15, 2026", image: hydroHero, text: "고해상도 초음파를 통해 실시간으로 유착된 조직 사이의 신경 압박을 해소하는 최신 시술법입니다. 손목터널증후군 등 신경 포착 질환에 탁월한 효과를 보입니다.", link: "/departments/injections/hydrodissection" },
+
+    { title: "면역력 강화 클리닉: 공진단 & 경옥고", date: "Jan 15, 2026", image: gongjindanHero, text: "황제의 보약 공진단과 무병장수의 명약 경옥고로 우리 가족의 면역력을 지키세요. 엄선된 정품 약재와 정성스러운 처방으로 기력 회복을 도와드립니다.", link: "/departments/immune-boosting" }
+
 ];
 
 export const doctor = {
@@ -172,4 +181,4 @@ export const doctor = {
         coloredCertificate
     ]
 };
-export const title = "MUKYO KMC";
+export const title = "MUKYOKMC";

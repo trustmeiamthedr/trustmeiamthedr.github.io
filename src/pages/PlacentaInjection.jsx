@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import heroImg from '../assets/images/placenta_vial_hero.png';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const PlacentaInjection = () => {
     useEffect(() => {
@@ -206,27 +207,29 @@ const PlacentaInjection = () => {
                 </div>
             </div>
 
+            <Breadcrumbs deptName="약침치료클리닉" subDeptName="태반약침" />
+
             {/* 2. Key Selling Points */}
             <section style={styles.section}>
                 <div style={styles.container}>
                     <div style={styles.grid3}>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.green }}>
-                                <i className="fa fa-leaf"></i>
+                                <i className="fa-solid fa-leaf"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>천연물 성분</h3>
                             <p style={{ color: '#666' }}>인공 합성 약물이 아닌, 태반에서 추출한 천연 성분으로 안전합니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.blue }}>
-                                <i className="fa fa-bolt"></i>
+                                <i className="fa-solid fa-bolt"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>빠른 효과</h3>
                             <p style={{ color: '#666' }}>고농도 영양소를 직접 공급하여 컨디션 회복이 빠릅니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.orange }}>
-                                <i className="fa fa-battery-full"></i>
+                                <i className="fa-solid fa-battery-full"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>강력한 효능</h3>
                             <p style={{ color: '#666' }}>간 기능 개선과 갱년기 증상 완화에 탁월합니다.</p>
@@ -252,7 +255,7 @@ const PlacentaInjection = () => {
                     <div style={styles.benefitsGrid}>
                         {['만성 피로 회복 & 간 기능 개선', '갱년기 장애 치료 (안면홍조, 불면증 완화)', '항노화 & 피부 미용 (탄력, 미백)', '통증 완화 및 면역력 증진'].map((item, i) => (
                             <div key={i} style={styles.benefitItem}>
-                                <i className="fa fa-check-circle" style={{ color: colors.green, fontSize: '2rem', marginBottom: '15px' }}></i>
+                                <i className="fa-solid fa-circle-check" style={{ color: colors.green, fontSize: '2rem', marginBottom: '15px' }}></i>
                                 <h3 style={styles.benefitTitle}>{item}</h3>
                             </div>
                         ))}
@@ -274,7 +277,7 @@ const PlacentaInjection = () => {
                                 "수술/병후 빠른 기력 회복이 필요하신 분"
                             ].map((item, i) => (
                                 <li key={i} style={styles.checklistItem}>
-                                    <i className="fa fa-check" style={{ color: colors.orange, marginRight: '15px' }}></i>
+                                    <i className="fa-solid fa-check" style={{ color: colors.orange, marginRight: '15px' }}></i>
                                     {item}
                                 </li>
                             ))}
@@ -292,7 +295,7 @@ const PlacentaInjection = () => {
                             <div key={index} style={styles.faqItem}>
                                 <button style={styles.faqQuestion} onClick={() => toggleFaq(index)}>
                                     <span style={{ flex: 1 }}>Q. {faq.q}</span>
-                                    <i className={`fa fa-chevron-${openFaq === index ? 'up' : 'down'}`} style={{ color: colors.blue }}></i>
+                                    <i className={`fa-solid fa-chevron-${openFaq === index ? 'up' : 'down'}`} style={{ color: colors.blue }}></i>
                                 </button>
                                 {openFaq === index && (
                                     <div style={styles.faqAnswer}>

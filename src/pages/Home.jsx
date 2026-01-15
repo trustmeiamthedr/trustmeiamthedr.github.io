@@ -14,7 +14,7 @@ function Home() {
             <Features />
             <Departments />
             <Doctors />
-            {/* <News /> */}
+            <News />
         </>
     );
 }

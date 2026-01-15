@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import heroImg from '../assets/images/n_injection_hero.png';
 import mechanismImg from '../assets/images/vasodilation_mechanism.png';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const NInjection = () => {
     useEffect(() => {
@@ -185,27 +186,29 @@ const NInjection = () => {
                 </div>
             </div>
 
+            <Breadcrumbs deptName="약침치료클리닉" subDeptName="N약침" />
+
             {/* 2. Key Selling Points */}
             <section style={styles.section}>
                 <div style={styles.container}>
                     <div style={styles.grid3}>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.vitalGreen }}>
-                                <i className="fa fa-leaf"></i>
+                                <i className="fa-solid fa-leaf"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>천연물 성분의 안전함</h3>
                             <p style={{ color: '#666' }}>천연 한약재 추출 성분으로 부작용 없이 안전하고 효과가 강력합니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.deepRed }}>
-                                <i className="fa fa-heartbeat"></i>
+                                <i className="fa-solid fa-heart-pulse"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>탁월한 혈액순환 개선</h3>
                             <p style={{ color: '#666' }}>혈관 내피세포에 직접 작용하여 혈관을 확장하고 흐름을 개선합니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.vitalGreen }}>
-                                <i className="fa fa-shield-alt"></i>
+                                <i className="fa-solid fa-shield-halved"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>림프 순환 및 면역 강화</h3>
                             <p style={{ color: '#666' }}>림프 배출을 도와 부종을 없애고 면역력을 근본적으로 높입니다.</p>
@@ -255,22 +258,22 @@ const NInjection = () => {
                         <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px' }}>
                             <h3 style={{ color: colors.deepRed, marginBottom: '20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>근골격계 질환</h3>
                             <ul style={styles.checklist}>
-                                <li style={styles.checklistItem}><i className="fa fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>디스크 / 협착증</li>
-                                <li style={styles.checklistItem}><i className="fa fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>관절염 / 오십견</li>
+                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>디스크 / 협착증</li>
+                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>관절염 / 오십견</li>
                             </ul>
                         </div>
                         <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px' }}>
                             <h3 style={{ color: colors.deepRed, marginBottom: '20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>순환 및 내과 질환</h3>
                             <ul style={styles.checklist}>
-                                <li style={styles.checklistItem}><i className="fa fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>수족냉증 / 쥐내림</li>
-                                <li style={styles.checklistItem}><i className="fa fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>소화불량 / 만성피로</li>
+                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>수족냉증 / 쥐내림</li>
+                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>소화불량 / 만성피로</li>
                             </ul>
                         </div>
                         <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px' }}>
                             <h3 style={{ color: colors.deepRed, marginBottom: '20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>신경계 질환</h3>
                             <ul style={styles.checklist}>
-                                <li style={styles.checklistItem}><i className="fa fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>두통 / 편두통</li>
-                                <li style={styles.checklistItem}><i className="fa fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>불면증 / 어지러움</li>
+                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>두통 / 편두통</li>
+                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>불면증 / 어지러움</li>
                             </ul>
                         </div>
                     </div>
@@ -286,7 +289,7 @@ const NInjection = () => {
                             <div key={index} style={styles.faqItem}>
                                 <button style={styles.faqQuestion} onClick={() => toggleFaq(index)}>
                                     <span style={{ flex: 1 }}>Q. {faq.q}</span>
-                                    <i className={`fa fa-chevron-${openFaq === index ? 'up' : 'down'}`} style={{ color: colors.deepRed }}></i>
+                                    <i className={`fa-solid fa-chevron-${openFaq === index ? 'up' : 'down'}`} style={{ color: colors.deepRed }}></i>
                                 </button>
                                 {openFaq === index && (
                                     <div style={styles.faqAnswer}>

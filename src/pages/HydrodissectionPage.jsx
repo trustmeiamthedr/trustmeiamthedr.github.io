@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ChevronRight, Activity, ShieldCheck, Zap, Crosshair } from 'lucide-react';
 import './HydrodissectionPage.css';
+import Breadcrumbs from '../components/Breadcrumbs';
 import hydroHeroImg from '../assets/images/hydro_carpal.png';
 import hydroTreatmentImg from '../assets/images/hydro_treatment.jpg';
 import carpalTunnelImg from '../assets/images/carpal_tunnel_illust.png';
@@ -22,6 +23,8 @@ const HydrodissectionPage = () => {
                     </div>
                 </div>
             </header>
+
+            <Breadcrumbs deptName="약침치료클리닉" subDeptName="하이드로다이섹션" />
 
             {/* 2. What is Hydrodissection? */}
             <section className="section hydro-what">

@@ -15,11 +15,11 @@ const Header = () => {
                 <div className="container flex justify-between align-center">
                     <div className="flex align-center">
                         <span style={{ marginRight: '20px', display: 'flex', alignItems: 'center' }}>
-                            <i className="fa fa-map-marker" style={{ marginRight: '5px', color: 'var(--secondary-color)' }}></i>
+                            <i className="fa-solid fa-location-dot" style={{ marginRight: '5px', color: 'var(--secondary-color)' }}></i>
                             {contact.address}
                         </span>
                         <span style={{ display: 'flex', alignItems: 'center' }}>
-                            <i className="fa fa-clock-o" style={{ marginRight: '5px', color: 'var(--secondary-color)' }}></i>
+                            <i className="fa-solid fa-clock" style={{ marginRight: '5px', color: 'var(--secondary-color)' }}></i>
                             {contact.openingHours}
                         </span>
                     </div>
@@ -32,7 +32,7 @@ const Header = () => {
 
                     {/* Hamburger Button (Left on Mobile) */}
                     <div className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                        <i className={`fa ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+                        <i className={`fa-solid ${mobileMenuOpen ? 'fa-xmark' : 'fa-bars'}`}></i>
                     </div>
 
                     {/* Logo Section */}
@@ -49,7 +49,7 @@ const Header = () => {
 
                     {/* Mobile Search Icon (Right) */}
                     <div className="mobile-search-icon" style={{ fontSize: '20px', color: '#333' }}>
-                        <i className="fa fa-search"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
 
                     {/* Desktop Menu */}
@@ -59,7 +59,7 @@ const Header = () => {
                                 return (
                                     <div key={index} className="dropdown-container">
                                         <Link to={item.link} className="nav-link" style={{ display: 'flex', alignItems: 'center' }}>
-                                            {item.name} <i className="fa fa-angle-down" style={{ marginLeft: '5px', fontSize: '12px' }}></i>
+                                            {item.name} <i className="fa-solid fa-angle-down" style={{ marginLeft: '5px', fontSize: '12px' }}></i>
                                         </Link>
                                         <div className="dropdown-menu">
                                             {departments.map((dept, i) => (
@@ -81,7 +81,7 @@ const Header = () => {
 
                         {/* Phone Number */}
                         <div style={{ display: 'flex', alignItems: 'center', marginLeft: '20px' }}>
-                            <i className="fa fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '5px', fontSize: '18px' }}></i>
+                            <i className="fa-solid fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '5px', fontSize: '18px' }}></i>
                             <span style={{ fontWeight: 'bold', color: '#333' }}>{contact.phone}</span>
                         </div>
                     </nav>
@@ -99,7 +99,7 @@ const Header = () => {
                                             style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}
                                             onClick={() => setMobileSubMenuOpen(!mobileSubMenuOpen)}
                                         >
-                                            {item.name} <i className={`fa ${mobileSubMenuOpen ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
+                                            {item.name} <i className={`fa-solid ${mobileSubMenuOpen ? 'fa-angle-up' : 'fa-angle-down'}`}></i>
                                         </div>
                                         {mobileSubMenuOpen && (
                                             <div className="mobile-submenu" style={{ backgroundColor: '#f9f9f9', paddingLeft: '20px' }}>
