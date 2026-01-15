@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { departments } from '../data';
 import Hero from '../components/Hero';
 import ScrollAnimation from '../components/ScrollAnimation';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const DepartmentsPage = () => {
     const styles = {
