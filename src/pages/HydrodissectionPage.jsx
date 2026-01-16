@@ -229,7 +229,7 @@ const HydrodissectionPage = () => {
                 <div className="container">
                     <h2>지긋지긋한 통증, 이제 원인을 찾아 해결하세요.</h2>
                     <p className="mb-30">정밀한 초음파 진단과 안전한 약침 치료가 함께합니다.</p>
-                    <a href="/appointment" className="btn btn-large">진료 예약 바로가기 <ChevronRight size={20} style={{ verticalAlign: 'middle' }} /></a>
+                    <a href="https://booking.naver.com/booking/13/bizes/384022" className="btn btn-large">진료 예약 바로가기 <ChevronRight size={20} style={{ verticalAlign: 'middle' }} /></a>
                 </div>
             </section>
         </div>

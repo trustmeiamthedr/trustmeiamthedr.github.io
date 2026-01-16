@@ -57,12 +57,7 @@ const ContactPage = () => {
             border: 0,
             display: 'block',
         },
-        grid: {
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '60px',
-            alignItems: 'start',
-        },
+
         infoBox: {
             marginBottom: '40px',
         },
@@ -137,7 +132,7 @@ const ContactPage = () => {
                         ></iframe>
                     </div>
 
-                    <div style={styles.grid}>
+                    <div className="contact-grid-container">
                         {/* Column 1: Clinic Info */}
                         <div>
                             <div style={styles.infoBox}>

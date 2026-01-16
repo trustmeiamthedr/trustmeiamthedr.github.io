@@ -232,7 +232,7 @@ const PlacentaInjection = () => {
                                 <i className="fa-solid fa-battery-full"></i>
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>강력한 효능</h3>
-                            <p style={{ color: '#666' }}>간 기능 개선과 갱년기 증상 완화에 탁월합니다.</p>
+                            <p style={{ color: '#666' }}>간 기능 개선과 남성과 여성의 갱년기 증상 완화에 탁월합니다.</p>
                         </div>
                     </div>
                 </div>

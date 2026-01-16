@@ -235,8 +235,8 @@ const PdrnInjection = () => {
             {/* 4. Recommended For */}
             <section style={styles.section}>
                 <div style={styles.container}>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '50px' }}>
-                        <div style={{ flex: 1 }}>
+                    <div className="pdrn-recommend-grid">
+                        <div className="pdrn-recommend-col">
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '30px' }}>이런 분께 추천합니다</h2>
                             <ul style={styles.checklist}>
                                 {[
@@ -252,7 +252,7 @@ const PdrnInjection = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div style={{ flex: 1, backgroundColor: colors.bgLight, padding: '40px', borderRadius: '20px', textAlign: 'center' }}>
+                        <div className="pdrn-recommend-col" style={{ backgroundColor: colors.bgLight, padding: '40px', borderRadius: '20px', textAlign: 'center' }}>
                             <i className="fa-solid fa-user-doctor" style={{ fontSize: '5rem', color: colors.accentPink, marginBottom: '20px' }}></i>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>전문의 상담 필수</h3>
                             <p style={{ color: '#666' }}>

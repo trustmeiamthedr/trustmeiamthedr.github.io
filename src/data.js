@@ -81,6 +81,8 @@ import doctorProfileBlue from './assets/images/doctor_profile_blue.png';
 
 
 
+import doctorProfileGrey from './assets/images/doctor_profile_grey.png';
+
 export const features = [
     { icon: doctorIcon, type: 'image', title: "풍부한 임상 경험", text: "풍부한 임상 경험을 바탕으로 꼭 필요한 진료만을 제안합니다." },
     { icon: naturalIcon, type: 'image', title: "안전한 순수 친환경 치료", text: "인체에 해를 주지 않는 순수 천연 성분의 약물로 치료합니다." },
@@ -138,7 +140,7 @@ export const doctor = {
     specialty: "전문의 한의학박사 RMSK(미국의사협회 근골격초음파 인증의)",
     phone: "070-7759-7779",
     email: "trustmeiamthedr@gmail.com",
-    image: doctorProfileBlue,
+    image: doctorProfileGrey,
     quote: "“바른 진단이 바른 치료를 만듭니다.",
     booking: "https://booking.naver.com/booking/13/bizes/384022",
     bio: "안녕하세요, 대표원장 성기원입니다. 좋은 치료란 무엇일까요? 저는 ‘내 몸을 정확히 아는 것’에서 시작한다고 생각합니다. 저희는 한방 전문의의 임상 경험과 RMSK(초음파 인증의)의 정밀한 진단을 결합하여, 통증의 원인과 몸의 불균형을 면밀히 파악합니다. 아픈 곳만 잠시 덮어두는 것이 아니라, 몸이 스스로 회복할 수 있는 힘을 길러드리는 것에 집중합니다. \n과잉 진료 없이, 꼭 필요한 치료만을 권해드리겠습니다. 믿고 찾을 수 있는 여러분의 평생 건강 파트너가 되겠습니다.",
