@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import gongjindanImg from '../assets/images/gongjindan_premium.jpg';
 import kyungokgoImg from '../assets/images/kyungokgo_premium.jpg';
+import PriceTable from '../components/PriceTable';
+
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const ImmuneBoosting = () => {
@@ -187,31 +189,8 @@ const ImmuneBoosting = () => {
 
             <Breadcrumbs deptName="면역강화클리닉" />
 
-            {/* Social Proof */}
-            <section style={{ ...styles.section, ...styles.socialProof }}>
-                <div style={styles.container}>
-                    <h2 style={{ fontSize: '2rem', marginBottom: '10px', color: '#333' }}>왜 많은 분들이 우리 병원을 찾으실까요?</h2>
-                    <p style={{ color: '#666' }}>임상으로 입증된 효과와 정성스러운 처방</p>
-                    <div style={styles.proofGrid}>
-                        <div style={styles.proofItem}>
-                            <i className="fa-solid fa-stethoscope" style={styles.proofIcon}></i>
-                            <h3>임상으로 입증된 효과</h3>
-                            <p>수많은 처방 사례와 호전 반응이 증명합니다.</p>
-                        </div>
-                        <div style={styles.proofItem}>
-                            <i className="fa-solid fa-users" style={styles.proofIcon}></i>
-                            <h3>높은 재처방률</h3>
-                            <p>효과를 보신 분들이 가족과 지인에게 다시 권합니다.</p>
-                        </div>
-                        <div style={styles.proofItem}>
-                            <i className="fa-solid fa-leaf" style={styles.proofIcon}></i>
-                            <h3>엄선된 정품 약재</h3>
-                            <p>식약처 인증을 받은 최상급 정품 약재만을 사용합니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            {/* Price Table */}
+            <PriceTable />
             {/* Product 1: Gongjindan */}
             <section style={styles.section}>
                 <div style={styles.container}>
@@ -330,7 +309,32 @@ const ImmuneBoosting = () => {
                 </div>
             </section>
 
+            {/* Social Proof */}
+            <section style={{ ...styles.section, ...styles.socialProof }}>
+                <div style={styles.container}>
+                    <h2 style={{ fontSize: '2rem', marginBottom: '10px', color: '#333' }}>왜 많은 분들이 우리 병원을 찾으실까요?</h2>
+                    <p style={{ color: '#666' }}>임상으로 입증된 효과와 정성스러운 처방</p>
+                    <div style={styles.proofGrid}>
+                        <div style={styles.proofItem}>
+                            <i className="fa-solid fa-stethoscope" style={styles.proofIcon}></i>
+                            <h3>임상으로 입증된 효과</h3>
+                            <p>수많은 처방 사례와 호전 반응이 증명합니다.</p>
+                        </div>
+                        <div style={styles.proofItem}>
+                            <i className="fa-solid fa-users" style={styles.proofIcon}></i>
+                            <h3>높은 재처방률</h3>
+                            <p>효과를 보신 분들이 가족과 지인에게 다시 권합니다.</p>
+                        </div>
+                        <div style={styles.proofItem}>
+                            <i className="fa-solid fa-leaf" style={styles.proofIcon}></i>
+                            <h3>엄선된 정품 약재</h3>
+                            <p>식약처 인증을 받은 최상급 정품 약재만을 사용합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             {/* Footer CTA */}
+
             <section id="contact" style={styles.footerCta}>
                 <div style={styles.container}>
                     <h2 style={{ marginBottom: '20px' }}>환자 한 분 한 분의 체질에 맞춰 정성껏 처방합니다.</h2>

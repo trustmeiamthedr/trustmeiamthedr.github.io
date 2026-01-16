@@ -128,6 +128,13 @@ const Header = () => {
                                 </Link>
                             );
                         })}
+
+                        {/* Mobile Phone Number */}
+                        <a href={`tel:${contact.phone}`} className="nav-link" style={{ display: 'flex', alignItems: 'center', marginTop: '10px', color: 'var(--secondary-color)', fontWeight: 'bold' }}>
+                            <i className="fa-solid fa-phone" style={{ marginRight: '10px', fontSize: '16px' }}></i>
+                            {contact.phone}
+                        </a>
+
                     </div>
                 )}
             </div>

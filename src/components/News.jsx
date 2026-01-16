@@ -10,7 +10,7 @@ const News = () => {
                 <div className="text-center" style={{ marginBottom: '60px' }}>
                     <h2 style={{ fontSize: '36px', color: '#333' }}>Latest News</h2>
                     <p style={{ maxWidth: '700px', margin: '0 auto', color: '#777' }}>
-                        Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                        통증 치료의 새로운 기준, 경희무교로한의원의 최신 소식과 건강 정보를 전해드립니다.
                     </p>
                 </div>
 

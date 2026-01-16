@@ -75,6 +75,8 @@ import heroSlide1 from './assets/images/hero_slide_1_v2.jpg';
 import pdrnHero from './assets/images/pdrn_hero.png';
 import hydroHero from './assets/images/hydro_carpal.png';
 import gongjindanHero from './assets/images/gongjindan_premium.jpg';
+import doctorProfileBlue from './assets/images/doctor_profile_blue.png';
+
 
 
 
@@ -126,17 +128,17 @@ export const latestNews = [
 
     { title: "초음파 유도하 하이드로다이섹션(Hydrodissection)", date: "Jan 15, 2026", image: hydroHero, text: "고해상도 초음파를 통해 실시간으로 유착된 조직 사이의 신경 압박을 해소하는 최신 시술법입니다. 손목터널증후군 등 신경 포착 질환에 탁월한 효과를 보입니다.", link: "/departments/injections/hydrodissection" },
 
-    { title: "면역력 강화 클리닉: 공진단 & 경옥고", date: "Jan 15, 2026", image: gongjindanHero, text: "황제의 보약 공진단과 무병장수의 명약 경옥고로 우리 가족의 면역력을 지키세요. 엄선된 정품 약재와 정성스러운 처방으로 기력 회복을 도와드립니다.", link: "/departments/immune-boosting" }
+    { title: "2026 설날 맞이 특별 기획전 : 공진단 & 경옥고", date: "Jan 15, 2026", image: gongjindanHero, text: "황제의 보약 공진단과 무병장수의 명약 경옥고로 우리 가족의 면역력을 지키세요. 엄선된 정품 약재와 정성스러운 처방으로 기력 회복을 도와드립니다.", link: "/departments/immune-boosting" }
 
 ];
 
 export const doctor = {
-    name: "Dr. Kim Won",
+    name: "Dr. 성 기 원",
     subtitle: "대표 원장",
     specialty: "전문의 한의학박사 RMSK(미국의사협회 근골격초음파 인증의)",
     phone: "070-7759-7779",
     email: "trustmeiamthedr@gmail.com",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop",
+    image: doctorProfileBlue,
     quote: "“바른 진단이 바른 치료를 만듭니다.",
     booking: "https://booking.naver.com/booking/13/bizes/384022",
     bio: "안녕하세요, 대표원장 성기원입니다. 좋은 치료란 무엇일까요? 저는 ‘내 몸을 정확히 아는 것’에서 시작한다고 생각합니다. 저희는 한방 전문의의 임상 경험과 RMSK(초음파 인증의)의 정밀한 진단을 결합하여, 통증의 원인과 몸의 불균형을 면밀히 파악합니다. 아픈 곳만 잠시 덮어두는 것이 아니라, 몸이 스스로 회복할 수 있는 힘을 길러드리는 것에 집중합니다. \n과잉 진료 없이, 꼭 필요한 치료만을 권해드리겠습니다. 믿고 찾을 수 있는 여러분의 평생 건강 파트너가 되겠습니다.",
@@ -181,4 +183,4 @@ export const doctor = {
         coloredCertificate
     ]
 };
-export const title = "MUKYOKMC";
+export const title = "경희무교로한의원";
