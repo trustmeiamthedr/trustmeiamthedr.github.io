@@ -35,8 +35,15 @@
     transition: all 0.2s;
 }
 
-.timetable-btn:hover {
+.timetable-btn:hover:not(:disabled) {
     background: #f5f5f5;
+}
+
+.timetable-btn:disabled {
+    background-color: #f5f5f5;
+    color: #ccc;
+    cursor: not-allowed;
+    border-color: #eee;
 }
 
 /* Calendar Grid */
