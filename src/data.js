@@ -66,11 +66,10 @@ export const infoBar = {
 
 
 import doctorIcon from './assets/icons/doctor_stethoscope.png';
-import naturalIcon from './assets/icons/dna_medicine_bottle.png';
+import naturalIcon from './assets/icons/injection_vials.png';
 import certificationIcon from './assets/icons/certification_badge.png';
 import coloredCertificate from './assets/icons/colored_certificate.png';
 import rmskIcon from './assets/icons/rmsk_badge.png';
-import heartIcon from './assets/icons/heart_care.png';
 import heroSlide1 from './assets/images/hero_slide_1_v2.jpg';
 import pdrnHero from './assets/images/pdrn_hero.png';
 import hydroHero from './assets/images/hydro_carpal.png';
@@ -111,7 +110,7 @@ import obesityIcon from './assets/icons/obesity_v2.png';
 import trafficIcon from './assets/icons/traffic_accident_v2.png';
 import respiratoryIcon from './assets/icons/respiratory_v2.png';
 import immuneIcon from './assets/icons/immune_v2.png';
-import injectionIcon from './assets/icons/dna_medicine_bottle.png';
+import injectionIcon from './assets/icons/injection_vials.png';
 
 export const departments = [
     { name: "SpineDisk", label: "척추/디스크", icon: spineIcon, type: 'image', link: "/departments/spine-disk", description: "목/허리 디스크, 협착증, 만성 요통 등 척추 질환을 초음파 유도하 약침요법으로 근본 치료합니다." },
@@ -137,7 +136,7 @@ export const latestNews = [
 export const doctor = {
     name: "Dr. 성 기 원",
     subtitle: "대표 원장",
-    specialty: "전문의 한의학박사 RMSK(미국의사협회 근골격초음파 인증의)",
+    specialty: "전문의 ・ 한의학박사 ・ RMSK(미국의사협회 근골격초음파 인증의)",
     phone: "070-7759-7779",
     email: "trustmeiamthedr@gmail.com",
     image: doctorProfileGrey,

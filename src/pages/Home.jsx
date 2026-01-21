@@ -11,8 +11,8 @@ function Home() {
         <>
             <Hero />
             <InfoBar />
-            <Features />
             <Departments />
+            <Features />
             <Doctors />
             <News />
         </>

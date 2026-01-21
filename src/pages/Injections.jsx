@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import mainHeroImg from '../assets/images/injections_main_hero.png';
 import Breadcrumbs from '../components/Breadcrumbs';
+import ultrasoundIcon from '../assets/icons/ultrasound_probe.png';
 
 const Injections = () => {
     useEffect(() => {
@@ -167,7 +168,7 @@ const Injections = () => {
                         {/* Hydrodissection Injection */}
                         <div style={styles.card}>
                             <div style={styles.cardContent}>
-                                <i className="fa-solid fa-crosshairs" style={{ ...styles.icon, color: '#0d2d62' }}></i>
+                                <img src={ultrasoundIcon} alt="Ultrasound" style={{ ...styles.icon, width: '40px', height: '40px', objectFit: 'contain' }} />
                                 <h3 style={styles.cardTitle}>초음파 유도하 하이드로다이섹션</h3>
                                 <p style={styles.cardDesc}>
                                     초음파로 병변을 직접 보며 약침으로 신경 유착을 박리하는 비수술적 치료입니다.
