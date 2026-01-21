@@ -203,6 +203,7 @@ const NInjection = () => {
                             N약침은 혈관, 신경, 림프, 염증 조절에 필수적인 신호전달물질인 <strong>산화질소(NO)</strong>를 체내에서 생성하는 산화질소대사체를 함유한 약침입니다.<br />
                             진통소염, 혈액순환, 림프순환, 회복, 재생 등의 효과를 나타내며, 각종 난치성 통증 질환과 내과 질환 치료에 폭넓게 사용됩니다.
                         </p>
+                        <img src={mechanismImg} alt="Vasodilation Mechanism" style={{ width: '100%', maxWidth: '560px', borderRadius: '15px', marginTop: '40px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
                     </div>
 
                     <h3 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '30px', color: '#333' }}>4대 핵심 효능</h3>
