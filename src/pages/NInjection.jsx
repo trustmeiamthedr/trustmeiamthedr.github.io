@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import heroImg from '../assets/images/n_injection_hero.png';
 import mechanismImg from '../assets/images/vasodilation_mechanism.png';
+import nitricOxideRolesImg from '../assets/images/nitric_oxide_roles.jpg';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const NInjection = () => {
@@ -68,9 +69,25 @@ const NInjection = () => {
             boxShadow: '0 4px 15px rgba(76, 175, 80, 0.4)',
             transition: 'transform 0.2s',
         },
-        grid3: {
+        introSection: {
+            textAlign: 'center',
+            marginBottom: '60px',
+            maxWidth: '900px',
+            margin: '0 auto 60px',
+        },
+        introText: {
+            fontSize: '1.1rem',
+            lineHeight: '1.8',
+            color: '#555',
+        },
+        grid2: {
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+            gap: '30px',
+        },
+        grid4: {
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gap: '30px',
             marginTop: '40px',
         },
@@ -82,6 +99,7 @@ const NInjection = () => {
             backgroundColor: '#fff',
             borderTop: `4px solid ${colors.deepRed}`,
             transition: 'transform 0.3s',
+            height: '100%',
         },
         iconCircle: {
             width: '80px',
@@ -94,45 +112,30 @@ const NInjection = () => {
             fontSize: '32px',
             color: '#fff',
         },
-        mechanismSection: {
+        categorySection: {
             backgroundColor: '#fff',
-            textAlign: 'center',
-        },
-        mechanismContent: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '30px',
-        },
-        mechanismImg: {
-            maxWidth: '100%',
+            padding: '30px',
             borderRadius: '15px',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+            boxShadow: '0 5px 15px rgba(0,0,0,0.03)',
         },
-        productGrid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '30px',
-            marginTop: '50px',
+        categoryTitle: {
+            color: colors.deepRed,
+            fontSize: '1.5rem',
+            marginBottom: '20px',
+            paddingBottom: '10px',
+            borderBottom: '2px solid #eee',
         },
-        productCard: {
-            backgroundColor: '#fff',
-            borderRadius: '15px',
-            padding: '40px',
-            textAlign: 'center',
-            boxShadow: '0 5px 20px rgba(0,0,0,0.05)',
-            border: '1px solid #eee',
-        },
-        checklist: {
-            listStyle: 'none',
-            padding: 0,
-        },
-        checklistItem: {
+        tagList: {
             display: 'flex',
-            alignItems: 'center',
-            fontSize: '1.2rem',
-            marginBottom: '15px',
-            color: colors.text,
+            flexWrap: 'wrap',
+            gap: '10px',
+        },
+        tag: {
+            backgroundColor: '#f5f5f5',
+            padding: '8px 15px',
+            borderRadius: '20px',
+            fontSize: '0.95rem',
+            color: '#555',
         },
         faqItem: {
             marginBottom: '15px',
@@ -188,100 +191,137 @@ const NInjection = () => {
 
             <Breadcrumbs deptName="약침치료클리닉" subDeptName="N약침" />
 
-            {/* 2. Key Selling Points */}
+            {/* 2. Definition Section */}
             <section style={styles.section}>
                 <div style={styles.container}>
-                    <div style={styles.grid3}>
+                    <div style={styles.introSection}>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', color: '#333' }}>N약침이란?</h2>
+                        <p style={{ ...styles.introText, fontWeight: 'bold', fontSize: '1.2rem', color: colors.deepRed, marginBottom: '20px' }}>
+                            1998년 노벨생리의학상을 수상한 기적의 물질, '산화질소(Nitric Oxide)'
+                        </p>
+                        <p style={styles.introText}>
+                            N약침은 혈관, 신경, 림프, 염증 조절에 필수적인 신호전달물질인 <strong>산화질소(NO)</strong>를 체내에서 생성하는 산화질소대사체를 함유한 약침입니다.<br />
+                            진통소염, 혈액순환, 림프순환, 회복, 재생 등의 효과를 나타내며, 각종 난치성 통증 질환과 내과 질환 치료에 폭넓게 사용됩니다.
+                        </p>
+                    </div>
+
+                    <h3 style={{ textAlign: 'center', fontSize: '2rem', marginBottom: '30px', color: '#333' }}>4대 핵심 효능</h3>
+                    <div style={styles.grid4}>
+                        <div style={styles.card}>
+                            <div style={{ ...styles.iconCircle, backgroundColor: colors.deepRed }}>
+                                <i className="fa-solid fa-droplet"></i>
+                            </div>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '10px' }}>혈관 확장</h4>
+                            <p style={{ color: '#666', fontSize: '0.95rem' }}>혈관 내피세포에 작용하여<br />혈류량을 증가시키고<br />혈액순환을 개선합니다.</p>
+                        </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.vitalGreen }}>
-                                <i className="fa-solid fa-leaf"></i>
+                                <i className="fa-solid fa-shield-virus"></i>
                             </div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>천연물 성분의 안전함</h3>
-                            <p style={{ color: '#666' }}>천연 한약재 추출 성분으로 부작용 없이 안전하고 효과가 강력합니다.</p>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '10px' }}>염증 제어</h4>
+                            <p style={{ color: '#666', fontSize: '0.95rem' }}>강력한 항염증 효과로<br />만성적인 염증 부위를<br />근본적으로 치료합니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.deepRed }}>
-                                <i className="fa-solid fa-heart-pulse"></i>
+                                <i className="fa-solid fa-bolt"></i>
                             </div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>탁월한 혈액순환 개선</h3>
-                            <p style={{ color: '#666' }}>혈관 내피세포에 직접 작용하여 혈관을 확장하고 흐름을 개선합니다.</p>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '10px' }}>신경 전달</h4>
+                            <p style={{ color: '#666', fontSize: '0.95rem' }}>신경세포 간 신호 전달을<br />원활하게 하여 신경통 및<br />감각 이상을 개선합니다.</p>
                         </div>
                         <div style={styles.card}>
                             <div style={{ ...styles.iconCircle, backgroundColor: colors.vitalGreen }}>
-                                <i className="fa-solid fa-shield-halved"></i>
+                                <i className="fa-solid fa-recycle"></i>
                             </div>
-                            <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>림프 순환 및 면역 강화</h3>
-                            <p style={{ color: '#666' }}>림프 배출을 도와 부종을 없애고 면역력을 근본적으로 높입니다.</p>
+                            <h4 style={{ fontSize: '1.3rem', marginBottom: '10px' }}>림프 순환</h4>
+                            <p style={{ color: '#666', fontSize: '0.95rem' }}>림프 배출을 도와<br />부종을 제거하고<br />면역력을 강화합니다.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 3. Mechanism Section */}
+            {/* 3. Indications (Major targets) */}
             <section style={{ ...styles.section, backgroundColor: '#f9f9f9' }}>
                 <div style={styles.container}>
-                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '40px', color: '#333' }}>산화질소(NO)의 작용 원리</h2>
-                    <div style={styles.mechanismContent}>
-                        <p style={{ fontSize: '1.2rem', color: '#555', maxWidth: '800px', textAlign: 'center' }}>
-                            산화질소(Nitric Oxide)는 혈관을 이완시키고 혈류량을 증가시키는 중요한 신호 전달 물질입니다.<br />
-                            좁아진 혈관을 넓혀 산소와 영양분이 전신으로 원활하게 공급되도록 돕습니다.
-                        </p>
-                        <img src={mechanismImg} alt="Vasodilation Mechanism" style={styles.mechanismImg} />
+                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '50px', color: '#333' }}>주요 적용 질환</h2>
+                    <div style={{ ...styles.grid2, marginBottom: '50px' }}>
+                        <div style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '20px', boxShadow: '0 5px 20px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                            <h3 style={{ color: colors.deepRed, fontSize: '1.8rem', marginBottom: '20px' }}>왜 다양한 질환에 쓰이나요?</h3>
+                            <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#555' }}>
+                                산화질소는 우리 몸의 <strong>모든 혈관과 신경계</strong>에 작용하는 기초 물질이기 때문입니다.<br />
+                                단순히 통증만 줄이는 것이 아니라, 혈액과 림프의 순환을 뚫어줌으로써 우리 몸이 스스로 회복할 수 있는 환경을 만들어줍니다.
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <img src={nitricOxideRolesImg} alt="Nitric Oxide Roles" style={{ maxWidth: '100%', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                        {/* Musculoskeletal */}
+                        <div style={styles.categorySection}>
+                            <h3 style={styles.categoryTitle}><i className="fa-solid fa-bone" style={{ marginRight: '10px' }}></i>근골격계 질환</h3>
+                            <div style={styles.tagList}>
+                                {["퇴행성 슬관절염", "오십견", "족저근막염", "목/허리 디스크", "테니스 엘보", "좌골신경통"].map((tag, i) => (
+                                    <span key={i} style={styles.tag}>{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Neuro & Psych */}
+                        <div style={styles.categorySection}>
+                            <h3 style={styles.categoryTitle}><i className="fa-solid fa-brain" style={{ marginRight: '10px' }}></i>뇌신경 및 정신과</h3>
+                            <div style={styles.tagList}>
+                                {["두통/어지럼증", "불면증", "치매/파킨슨 관리", "우울증/공황장애", "자율신경실조증"].map((tag, i) => (
+                                    <span key={i} style={styles.tag}>{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Internal & Circulatory */}
+                        <div style={styles.categorySection}>
+                            <h3 style={styles.categoryTitle}><i className="fa-solid fa-heart-pulse" style={{ marginRight: '10px' }}></i>내과 및 순환기</h3>
+                            <div style={styles.tagList}>
+                                {["만성 위염", "과민성대장증후군", "수족냉증", "당뇨/고혈압 관리"].map((tag, i) => (
+                                    <span key={i} style={styles.tag}>{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Gynecology */}
+                        <div style={styles.categorySection}>
+                            <h3 style={styles.categoryTitle}><i className="fa-solid fa-person-dress" style={{ marginRight: '10px' }}></i>부인과 질환</h3>
+                            <div style={styles.tagList}>
+                                {["생리통/배란통", "다낭성난소증후군", "생리불순", "무월경", "월경전증후군"].map((tag, i) => (
+                                    <span key={i} style={styles.tag}>{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* ENT */}
+                        <div style={styles.categorySection}>
+                            <h3 style={styles.categoryTitle}><i className="fa-solid fa-ear-listen" style={{ marginRight: '10px' }}></i>이비인후과</h3>
+                            <div style={styles.tagList}>
+                                {["비염", "축농증", "이명", "난청"].map((tag, i) => (
+                                    <span key={i} style={styles.tag}>{tag}</span>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Skin & Others */}
+                        <div style={styles.categorySection}>
+                            <h3 style={styles.categoryTitle}><i className="fa-solid fa-hand-dots" style={{ marginRight: '10px' }}></i>피부 및 기타</h3>
+                            <div style={styles.tagList}>
+                                {["탈모", "지방종", "여드름", "무좀", "건선/아토피", "습진", "대상포진"].map((tag, i) => (
+                                    <span key={i} style={styles.tag}>{tag}</span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* 4. Product Types */}
+            {/* 4. FAQ */}
             <section style={styles.section}>
-                <div style={styles.container}>
-                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '40px', color: '#333' }}>N약침 종류</h2>
-                    <div style={styles.productGrid}>
-                        <div style={styles.productCard}>
-                            <h3 style={{ color: '#555', fontSize: '1.8rem', marginBottom: '15px' }}>Type A: N / N3%</h3>
-                            <p style={{ color: '#777', marginBottom: '20px' }}>일반적인 순환 관리 및 경미한 통증</p>
-                            <span style={{ backgroundColor: '#eee', padding: '5px 15px', borderRadius: '20px', fontSize: '0.9rem' }}>Basic Care</span>
-                        </div>
-                        <div style={{ ...styles.productCard, border: `2px solid ${colors.deepRed}`, transform: 'scale(1.05)' }}>
-                            <div style={{ backgroundColor: colors.deepRed, color: '#fff', display: 'inline-block', padding: '5px 15px', borderRadius: '20px', marginBottom: '15px', fontSize: '0.9rem' }}>High Potency</div>
-                            <h3 style={{ color: colors.deepRed, fontSize: '2rem', marginBottom: '15px', fontWeight: 'bold' }}>Type B: N600</h3>
-                            <p style={{ color: '#555', marginBottom: '20px' }}>만성 통증 및 강력한 순환 개선이 필요할 때</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 5. Recommended For */}
-            <section style={{ ...styles.section, backgroundColor: '#fff3e0' }}>
-                <div style={styles.container}>
-                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '50px' }}>이런 분께 추천합니다</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-                        <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px' }}>
-                            <h3 style={{ color: colors.deepRed, marginBottom: '20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>근골격계 질환</h3>
-                            <ul style={styles.checklist}>
-                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>디스크 / 협착증</li>
-                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>관절염 / 오십견</li>
-                            </ul>
-                        </div>
-                        <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px' }}>
-                            <h3 style={{ color: colors.deepRed, marginBottom: '20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>순환 및 내과 질환</h3>
-                            <ul style={styles.checklist}>
-                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>수족냉증 / 쥐내림</li>
-                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>소화불량 / 만성피로</li>
-                            </ul>
-                        </div>
-                        <div style={{ backgroundColor: '#fff', padding: '30px', borderRadius: '15px' }}>
-                            <h3 style={{ color: colors.deepRed, marginBottom: '20px', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>신경계 질환</h3>
-                            <ul style={styles.checklist}>
-                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>두통 / 편두통</li>
-                                <li style={styles.checklistItem}><i className="fa-solid fa-check" style={{ color: colors.vitalGreen, marginRight: '10px' }}></i>불면증 / 어지러움</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* 6. FAQ */}
-            <section style={{ ...styles.section, backgroundColor: '#fff' }}>
                 <div style={styles.container}>
                     <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '50px' }}>자주 묻는 질문</h2>
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -302,7 +342,7 @@ const NInjection = () => {
                 </div>
             </section>
 
-            {/* 7. Footer & Final CTA */}
+            {/* 5. Footer & Final CTA */}
             <section id="footer-cta" style={{ ...styles.section, backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '100px 0' }}>
                 <div style={styles.container}>
                     <h2 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>내 몸의 막힌 곳을 시원하게 뚫어주세요.</h2>
