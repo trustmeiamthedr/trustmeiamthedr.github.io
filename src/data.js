@@ -74,7 +74,6 @@ import heroSlide1 from './assets/images/hero_slide_1_v2.jpg';
 import pdrnHero from './assets/images/pdrn_hero.png';
 import hydroHero from './assets/images/hydro_carpal.png';
 import gongjindanHero from './assets/images/gongjindan_premium.jpg';
-import doctorProfileBlue from './assets/images/doctor_profile_blue.png';
 
 
 

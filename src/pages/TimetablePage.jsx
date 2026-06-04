@@ -9,21 +9,21 @@ const TimetablePage = () => {
     const realMonth = realToday.getMonth() + 1;
 
     // Displayed month state
-    const [displayYear, setDisplayYear] = useState(2026);
-    const [displayMonth, setDisplayMonth] = useState(1);
+    const [displayYear, setDisplayYear] = useState(realYear);
+    const [displayMonth, setDisplayMonth] = useState(realMonth);
 
     // Navigation limits (current month and next month)
-    const nextMonthDate = new Date(2026, 1, 1); // Feb 2026
+    const nextMonthDate = new Date(realYear, realMonth, 1);
     const nextYear = nextMonthDate.getFullYear();
     const nextMonth = nextMonthDate.getMonth() + 1;
 
-    const isFirstMonth = displayYear === 2026 && displayMonth === 1;
-    const isLastMonth = displayYear === nextYear && displayMonth === nextMonth;
+    const isFirstMonth = displayYear === realYear && displayMonth === realMonth;
+    const isLastMonth = !isFirstMonth;
 
     const handlePrevMonth = () => {
         if (!isFirstMonth) {
-            setDisplayYear(2026);
-            setDisplayMonth(1);
+            setDisplayYear(realYear);
+            setDisplayMonth(realMonth);
         }
     };
 
@@ -108,6 +108,26 @@ const TimetablePage = () => {
             } else {
                 info.push({ text: '진료', type: 'open', time: '09:30 - 19:00' });
             }
+        } else if (displayMonth === 3 && displayYear === 2026) {
+            // March 2026
+            const closedDates = [14, 28];
+            const openSaturdays = [7, 21]; // Assuming same alternating pattern if not specified
+
+            if (closedDates.includes(d)) {
+                info.push({ text: '휴진', type: 'closed', time: '휴무' });
+                status = 'closed';
+            } else if (dayOfWeek === 0) { // Sunday
+                status = 'closed';
+            } else if (dayOfWeek === 6) { // Saturday
+                if (openSaturdays.includes(d)) {
+                    info.push({ text: '진료', type: 'open', time: '10:00 - 12:00' });
+                } else {
+                    info.push({ text: '휴진', type: 'closed', time: '휴무' });
+                    status = 'closed';
+                }
+            } else {
+                info.push({ text: '진료', type: 'open', time: '09:30 - 19:00' });
+            }
         }
 
         days.push({
@@ -137,6 +157,14 @@ const TimetablePage = () => {
             }
         } else if (realYear === 2026 && realMonth === 2) {
             const closedDates = [2, 16, 17, 18];
+            if (closedDates.includes(day)) return "오늘 휴진";
+            if (dayOfWeek === 0) return "오늘 휴진";
+            if (dayOfWeek === 6) {
+                const openSaturdays = [7, 21];
+                return openSaturdays.includes(day) ? "오늘 정상진료" : "오늘 휴진";
+            }
+        } else if (realYear === 2026 && realMonth === 3) {
+            const closedDates = [14, 28];
             if (closedDates.includes(day)) return "오늘 휴진";
             if (dayOfWeek === 0) return "오늘 휴진";
             if (dayOfWeek === 6) {

@@ -21,13 +21,22 @@ const Footer = () => {
                             <i className="fa-solid fa-phone" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.phone}</span>
                         </a>
-                        <a href={`mailto:${contact.email}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'inherit', color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }}
+                        <a href={`mailto:${contact.email}`} style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', justifyContent: 'inherit', color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }}
                             onMouseEnter={(e) => e.currentTarget.style.color = 'var(--secondary-color)'}
                             onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}
                         >
                             <i className="fa-solid fa-envelope" style={{ color: 'var(--secondary-color)', marginRight: '15px', fontSize: '16px' }}></i>
                             <span style={{ fontWeight: '600' }}>{contact.email}</span>
                         </a>
+                        <div style={{ marginTop: '20px', borderTop: '1px dashed #ddd', paddingTop: '15px' }}>
+                            <Link to="/non-covered-notice" style={{ fontSize: '12px', color: '#888', textDecoration: 'none', transition: 'color 0.3s', display: 'flex', alignItems: 'center' }}
+                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--secondary-color)'}
+                                onMouseLeave={(e) => e.currentTarget.style.color = '#888'}
+                            >
+                                <i className="fa-solid fa-file-lines" style={{ marginRight: '8px', fontSize: '13px', color: 'var(--secondary-color)' }}></i>
+                                비급여 진료비용 고시
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Column 2: Clinic Address */}
