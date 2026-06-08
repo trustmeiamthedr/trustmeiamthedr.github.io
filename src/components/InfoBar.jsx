@@ -21,13 +21,6 @@ const InfoBar = () => {
                         </ul>
                     </div>
 
-                    {/* Doctors Timetable */}
-                    <div className="info-col">
-                        <h3 style={{ fontSize: '20px', marginBottom: '30px' }}>{infoBar.timetable.title}</h3>
-                        <p style={{ marginBottom: '30px', opacity: '0.8', fontSize: '14px', lineHeight: '1.6' }}>{infoBar.timetable.text}</p>
-                        <Link to="/timetable" className="btn timetable-btn">{infoBar.timetable.buttonText}</Link>
-                    </div>
-
                     {/* Appointment Form */}
                     <div className="info-col appointment-col">
                         <h3 style={{ fontSize: '20px', marginBottom: '30px' }}>진료 예약하기</h3>

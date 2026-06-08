@@ -16,22 +16,22 @@ export const heroSlider = { // Keep as fallback/alias if needed by other compone
 export const heroSlides = [
     {
         image: heroSlide1, // Updated image
-        subtitle: "아픔의 원인을 봅니다. 과학적 진단으로 만나는 바른 한방 치료.",
-        title: "바른 진단, 바른 치료!",
+        subtitle: "일시적 진통 대신, 붓기를 빼고 영양을 공급해 세포 스스로 살아나게 합니다.",
+        title: "통증 완화를 넘어, 근본적 회복 환경 구축",
         buttonText: "예약하기",
         link: "https://booking.naver.com/booking/13/bizes/384022"
     },
     {
         image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2953&auto=format&fit=crop", // Hospital hallway/modern
-        subtitle: "미국 초음파 의사협회 근골격계 인증의(RMSK) 자격 취득",
-        title: "보이는 진단, 근거 있는 치료",
+        subtitle: "뼈와 힘줄의 마찰과 압박을 정밀하게 교정하여 비수술적 회복을 도웁니다.",
+        title: "수술 걱정 전, 아픈 '움직임 환경' 개선",
         buttonText: "예약하기",
         link: "https://booking.naver.com/booking/13/bizes/384022"
     },
     {
         image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2940&auto=format&fit=crop", // Medical staff/team
-        subtitle: "객관적인 진단을 근거로 치료하는 신뢰할 수 있는 전문가",
-        title: "끊임없는 연구, 당신의 아픔을 이해하는 깊이가 됩니다.",
+        subtitle: "노화가 아닌 누적된 과부하를 해결하여 힘줄 본래의 탄력을 되찾아 드립니다.",
+        title: "나이 탓이 아닌, 지친 관절의 '과부하 해소'",
         buttonText: "예약하기",
         link: "https://booking.naver.com/booking/13/bizes/384022"
     }
@@ -147,6 +147,34 @@ export const doctor = {
         `성기원 원장은 경희대학교 한의과대학을 졸업하고 동 대학원에서 석·박사 학위를 취득한 한방 전문의입니다. 전통 한의학의 지혜에 머무르지 않고, 미국 초음파 의사협회(ARDMS)의 근골격계 초음파 인증의(RMSK) 자격을 취득하여 진단의 객관성과 정확도를 높였습니다.
     
     끊임없는 연구를 통해 뇌혈관 질환, 소화기 수술 후유증, 전립선 질환 등 난치성 질환에 대한 임상 논문을 다수 발표하며 근거 중심의 의술을 펼치고 있습니다.
+
+    <div style="margin-top: 35px; margin-bottom: 35px;">
+        <strong style="display: block; margin-bottom: 15px; color: #333; font-size: 16px;">[치료의 3가지 약속]</strong>
+        <p style="margin-bottom: 25px; line-height: 1.8; color: #555;">
+            저희 병원을 찾아오시는 많은 분들이 진단명을 듣고 '평생 안 나으면 어쩌지?', '결국 수술해야 하나?' 하는 막연한 두려움을 안고 오십니다. 저는 진료실에서 그 불안을 희망으로 바꿔드리는 진료를 하고자 합니다. 저희 병원 치료의 3가지 약속을 전합니다.
+        </p>
+        
+        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 25px;">
+            <div style="background-color: #fff; padding: 20px; border-left: 4px solid var(--secondary-color); border-radius: 0 8px 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <strong style="display: block; color: var(--secondary-color); font-size: 15px; margin-bottom: 8px;">첫째, 통증만 지우는 치료가 아닌 '근본적인 회복'에 집중합니다.</strong>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #666;">단순히 통증을 일시적으로 차단하는 치료는 오래가지 못합니다. 약해지고 부어오른 조직의 회복력을 깨우고 세포 환경을 개선하여, 몸 스스로가 다시 건강해지는 자생력을 길러드립니다.</p>
+            </div>
+            
+            <div style="background-color: #fff; padding: 20px; border-left: 4px solid var(--secondary-color); border-radius: 0 8px 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <strong style="display: block; color: var(--secondary-color); font-size: 15px; margin-bottom: 8px;">둘째, 칼을 대기 전에 몸의 '움직임 환경'을 먼저 치료합니다.</strong>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #666;">파열이나 협착이라는 말에 먼저 겁먹으실 필요는 없습니다. 힘줄과 관절이 스트레스를 받게 만든 마찰과 압박 환경을 정밀하게 치료하여, 비수술적인 방법으로도 충분히 호전될 수 있는 길을 함께 찾아가겠습니다.</p>
+            </div>
+            
+            <div style="background-color: #fff; padding: 20px; border-left: 4px solid var(--secondary-color); border-radius: 0 8px 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+                <strong style="display: block; color: var(--secondary-color); font-size: 15px; margin-bottom: 8px;">셋째, 노화라는 절망 대신 '과부하를 줄이는 희망'을 드립니다.</strong>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #666;">"나이 들어 그렇다"는 무책임한 말 대신, 그동안 삶의 무게를 견디며 지쳐버린 관절 and 힘줄을 세심하게 들여다보겠습니다. 회복 속도가 사용량을 따라잡을 수 있도록 과부하를 해소하고 본래의 탄력을 되찾아 드리겠습니다.</p>
+            </div>
+        </div>
+        
+        <p style="line-height: 1.8; color: #333; font-weight: 500; margin-bottom: 0;">
+            아픈 부위만 보는 것이 아니라 환자분의 일상을 함께 고민하는 든든한 동반자가 되겠습니다. 감사합니다.
+        </p>
+    </div>
 
     <div style="margin-top: 20px;">
         <strong style="display: block; margin-bottom: 10px; color: #333;">[연구 및 학술 활동]</strong>
