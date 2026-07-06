@@ -12,8 +12,36 @@ const HydrodissectionPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    // AEO/GEO FAQPage Schema Markup
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "하이드로다이섹션(신경박리술) 시술 시간과 통증 정도는 어떻게 되나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "시술은 고해상도 초음파 유도하에 이루어지며, 부위별로 차이가 있지만 대략 10분 내외로 매우 짧습니다. 주삿바늘을 통한 미세 시술이므로 시술 시 뻐근한 느낌이 있을 수 있지만 일반적인 주사 치료 수준의 통증이며 마취가 불필요할 정도로 안전하고 통증이 적습니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "손목터널증후군이나 어깨 유착 치료에 이 시술이 효과적인 원리가 무엇인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "손목터널이나 어깨 회전근개 주변 등 관절 부위의 인대와 근막은 염증으로 인해 좁아지거나 서로 달라붙기(유착) 쉽습니다. 초음파 영상을 통해 신경 주변에 천연 약침액 등을 주입하여 물리적으로 수압(Hydro)을 주면, 신경을 둘러싼 주변의 미세 유착 부위가 벌어지면서 박리(Dissection)되어 압박이 즉각 해소됩니다."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="hydro-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             {/* 1. Hero Section */}
             <header className="hydro-hero" style={{ backgroundImage: `linear-gradient(rgba(13, 45, 98, 0.8), rgba(13, 45, 98, 0.6)), url(${hydroHeroImg})` }}>
                 <div className="container">
@@ -206,8 +234,9 @@ const HydrodissectionPage = () => {
             {/* 5. FAQ / Benefits */}
             <section className="section hydro-benefits bg-gray">
                 <div className="container">
-                    <h2 className="section-title text-center mb-40">시술 장점</h2>
-                    <div className="benefits-list">
+                    <h2 className="section-title text-center mb-40">시술 장점 및 자주 묻는 질문</h2>
+                    
+                    <div className="benefits-list" style={{ marginBottom: '60px' }}>
                         <div className="benefit-item">
                             <div className="check-icon">✔</div>
                             <div className="benefit-text">시술 시간이 10분 내외로 짧습니다.</div>
@@ -219,6 +248,35 @@ const HydrodissectionPage = () => {
                         <div className="benefit-item">
                             <div className="check-icon">✔</div>
                             <div className="benefit-text">반복 시술에도 내성이나 부작용 걱정이 적습니다.</div>
+                        </div>
+                    </div>
+
+                    <div className="clinical-faq-section" style={{ borderTop: '1px solid #ddd', paddingTop: '60px' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+                            <span style={{ color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '8px' }}>FAQ</span>
+                            <h3 style={{ fontSize: '26px', color: '#333', fontWeight: 'bold', margin: 0 }}>하이드로다이섹션 자주 묻는 질문</h3>
+                        </div>
+
+                        <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px', marginTop: '30px' }}>
+                            <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12 rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #eef2f6', borderLeftWidth: '4px' }}>
+                                <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                    <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                    하이드로다이섹션(신경박리술) 시술 시간과 통증 정도는 어떻게 되나요?
+                                </h4>
+                                <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                    시술은 고해상도 초음파 유도하에 이루어지며, 부위별로 차이가 있지만 대략 10분 내외로 매우 짧습니다. 주삿바늘을 통한 미세 시술이므로 시술 시 뻐근한 느낌이 있을 수 있지만 일반적인 주사 치료 수준의 통증이며 마취가 불필요할 정도로 안전하고 통증이 적습니다.
+                                </p>
+                            </div>
+
+                            <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12 rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #eef2f6', borderLeftWidth: '4px' }}>
+                                <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                    <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                    손목터널증후군이나 어깨 유착 치료에 이 시술이 효과적인 원리가 무엇인가요?
+                                </h4>
+                                <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                    손목터널이나 어깨 회전근개 주변 등 관절 부위의 인대와 근막은 염증으로 인해 좁아지거나 서로 달라붙기(유착) 쉽습니다. 초음파 영상을 통해 신경 주변에 천연 약침액 등을 주입하여 물리적으로 수압(Hydro)을 주면, 신경을 둘러싼 주변의 미세 유착 부위가 벌어지면서 박리(Dissection)되어 압박이 즉각 해소됩니다.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

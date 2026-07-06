@@ -1,9 +1,10 @@
 
 export const menuItems = [
     { name: '홈', link: '/' },
-    { name: '병원소개', link: '/doctor' },
+    { name: '의료진 소개', link: '/doctor' },
     { name: '진료과목', link: '/departments' },
     { name: '진료시간표', link: '/timetable' },
+    { name: '자주 묻는 질문', link: '/faq' },
     { name: '찾아오시는 길', link: '/contact' },
 ];
 
@@ -41,7 +42,7 @@ export const heroImages = heroSlides.map(slide => slide.image);
 
 export const contact = {
     phone: "070-7759-7779",
-    email: "trustmeiamthedr@gmail.com",
+    email: "mgrdoc.com@gmail.com",
     address: "서울 중구 무교로 16 대한체육회 7F, 04522",
     openingHours: "월-금: 9:30AM - 7:00PM, 토: 10:00AM - 12:00PM(격주진료), 일: 휴무"
 };
@@ -137,7 +138,7 @@ export const doctor = {
     subtitle: "대표 원장",
     specialty: "전문의 ・ 한의학박사 ・ RMSK(미국의사협회 근골격초음파 인증의)",
     phone: "070-7759-7779",
-    email: "trustmeiamthedr@gmail.com",
+    email: "mgrdoc.com@gmail.com",
     image: doctorProfileGrey,
     quote: "“바른 진단이 바른 치료를 만듭니다.",
     booking: "https://booking.naver.com/booking/13/bizes/384022",

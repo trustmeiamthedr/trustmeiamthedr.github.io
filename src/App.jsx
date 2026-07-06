@@ -26,6 +26,7 @@ import ContactPage from './pages/ContactPage';
 import TimetablePage from './pages/TimetablePage';
 import DepartmentsPage from './pages/DepartmentsPage';
 import NonCoveredNotice from './pages/NonCoveredNotice';
+import FAQPage from './pages/FAQPage';
 import ScrollToTop from './components/ScrollToTop';
 import Preloader from './components/Preloader';
 
@@ -74,6 +75,7 @@ function App() {
           <Route path="/timetable" element={<TimetablePage />} />
           <Route path="/departments/injections/hydrodissection" element={<HydrodissectionPage />} />
           <Route path="/non-covered-notice" element={<NonCoveredNotice />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
         <Footer />
       </div>

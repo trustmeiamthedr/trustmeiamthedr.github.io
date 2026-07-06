@@ -1271,3 +1271,187 @@ section {
     gap: 40px;
   }
 }
+
+/* Doctor Profile Summary Table Styles */
+.doctor-summary-table-container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f1f1;
+}
+
+.doctor-summary-table-container h3.section-subtitle {
+  font-size: 1.15rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border-left: 3px solid var(--secondary-color);
+  padding-left: 10px;
+}
+
+.doctor-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.doctor-summary-table th, 
+.doctor-summary-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f1f1f1;
+  text-align: left;
+}
+
+.doctor-summary-table th {
+  font-weight: 600;
+  color: #444;
+  background-color: #fcfcfc;
+  width: 25%;
+  min-width: 110px;
+}
+
+.doctor-summary-table td {
+  color: #666;
+}
+
+.doctor-summary-table tr:last-child th,
+.doctor-summary-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 576px) {
+  .doctor-summary-table th, 
+  .doctor-summary-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .doctor-summary-table th {
+    background-color: #fcfcfc;
+    padding-bottom: 5px;
+    border-bottom: none;
+  }
+  
+  .doctor-summary-table td {
+    padding-top: 5px;
+  }
+}
+
+/* FAQ Styles */
+.faq-section-wrapper {
+  background-color: #fafafa;
+  border-top: 1px solid #eaeaea;
+  padding: 80px 0;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-tag {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.faq-title {
+  font-size: 2rem;
+  color: #222;
+  margin: 0;
+  font-weight: 700;
+}
+
+.faq-desc {
+  color: #666;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq-item {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  border-left: 4px solid var(--secondary-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.faq-question span {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.faq-answer strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Central FAQ Page Additional Hover & Interactive Styles */
+.faq-category-tabs button:hover {
+  border-color: var(--secondary-color) !important;
+  background-color: #fffcfc !important;
+  color: var(--secondary-color) !important;
+}
+
+.faq-category-tabs button.active:hover {
+  background-color: var(--secondary-color) !important;
+  color: #ffffff !important;
+}
+
+.faq-accordion-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Responsive clinical FAQ styles override if needed */
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+}

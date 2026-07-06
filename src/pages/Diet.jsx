@@ -5,8 +5,36 @@ import nitricOxideMechanism from '../assets/images/nitric_oxide_fat_mechanism.jp
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const Diet = () => {
+    // AEO/GEO FAQPage Schema Markup
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "엔오슬림 다이어트 한약은 일반 다이어트 약과 어떻게 다른가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "엔오슬림(Enoslim)은 체질 분석과 대표원장 상담을 거쳐 안전하게 처방되는 한방 다이어트 치료입니다. 인위적인 중추신경 흥분제 위주의 일반 양약과 달리, 우리 몸에 축적된 과부하를 해소하고 신진대사를 자연스럽게 활성화시켜 기초대사량을 증가시킵니다. 근육량 손실을 최소화하고 체지방 위주의 건강한 감량을 돕는 것이 강점입니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "다이어트 약 복용 중 요요 현상을 방지하는 요요 방지 프로그램이 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네, 본원에서는 감량 완료 후에도 감량 체중 1kg당 1개월의 유지 기간을 설정하여 점진적으로 복용 횟수를 줄이는 체계적인 요요 방지 프로그램을 제공합니다. 이를 통해 몸의 항상성을 유지하고 작아진 위장 크기와 저하된 세트포인트를 체형이 안정적으로 적응하도록 지원합니다."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="diet-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             {/* Hero Section */}
             <div className="page-hero">
                 <div className="container">
@@ -175,6 +203,36 @@ const Diet = () => {
                         </ul>
                     </div>
 
+                </div>
+
+                {/* FAQ Section */}
+                <div className="clinical-faq-section" style={{ marginTop: '80px', paddingTop: '60px', borderTop: '1px solid #eee' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+                        <span style={{ color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '8px' }}>FAQ</span>
+                        <h3 style={{ fontSize: '26px', color: '#333', fontWeight: 'bold', margin: 0 }}>비만/다이어트 클리닉 자주 묻는 질문</h3>
+                    </div>
+
+                    <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px', marginTop: '30px' }}>
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                엔오슬림 다이어트 한약은 일반 다이어트 약과 어떻게 다른가요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                엔오슬림(Enoslim)은 체질 분석과 대표원장 상담을 거쳐 안전하게 처방되는 한방 다이어트 치료입니다. 인위적인 중추신경 흥분제 위주의 일반 양약과 달리, 우리 몸에 축적된 과부하를 해소하고 신진대사를 자연스럽게 활성화시켜 기초대사량을 증가시킵니다. 근육량 손실을 최소화하고 체지방 위주의 건강한 감량을 돕는 것이 강점입니다.
+                            </p>
+                        </div>
+
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                다이어트 약 복용 중 요요 현상을 방지하는 요요 방지 프로그램이 있나요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                네, 본원에서는 감량 완료 후에도 감량 체중 1kg당 1개월의 유지 기간을 설정하여 점진적으로 복용 횟수를 줄이는 체계적인 요요 방지 프로그램을 제공합니다. 이를 통해 몸의 항상성을 유지하고 작아진 위장 크기와 저하된 세트포인트를 체형이 안정적으로 적응하도록 지원합니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div style={{ marginTop: '60px', textAlign: 'center' }}>

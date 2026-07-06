@@ -8,6 +8,46 @@ const ContactPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    // MedicalBusiness Schema.org structured data for local business SEO/AEO/GEO
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "경희무교로한의원",
+        "alternateName": "Kyunghee Mukyoro Korean Medicine Clinic",
+        "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2953&auto=format&fit=crop",
+        "telephone": contact.phone,
+        "email": contact.email,
+        "url": "https://mgrdoc.com/contact",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "무교로 16 대한체육회 7F",
+            "addressLocality": "서울 중구 무교동",
+            "addressRegion": "서울특별시",
+            "postalCode": "04522",
+            "addressCountry": "KR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "37.567165",
+            "longitude": "126.977067"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:30",
+                "closes": "19:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "12:00"
+            }
+        ],
+        "description": "서울 시청역 5번 출구 도보 3분, 을지로입구역 1번 출구 도보 5분 거리, 서울파이낸스센터(SFC) 옆 대한체육회 빌딩 7층에 위치한 한의원입니다. 근골격계 초음파 유도하 약침 치료, 하이드로다이섹션 및 다이어트 엔오슬림 한약 처방을 전문으로 합니다."
+    };
+
     const styles = {
         page: {
             backgroundColor: '#fff',
@@ -105,18 +145,24 @@ const ContactPage = () => {
 
     return (
         <div style={styles.page}>
+            {/* JSON-LD Structured Data for Local Search & AI Engines */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
+
             {/* Hero Section */}
             <header style={styles.hero}>
                 <div className="container">
-                    <h1 style={styles.heroTitle}>How to Get Here</h1>
+                    <h1 style={styles.heroTitle}>찾아오시는 길</h1>
                     <p style={styles.heroSubtitle}>
-                        경희무교로한의원은 서울의 중심, 시청역과 을지로입구역 인근에 위치하고 있습니다.
-                        가장 편안한 발걸음으로 찾아오실 수 있도록 상세한 위치를 안내해 드립니다.
+                        경희무교로한의원은 서울의 중심인 시청역(서울시청 광장)과 을지로입구역 인근,
+                        무교동 음식문화거리 내 서울파이낸스센터(SFC) 근처에 위치하고 있습니다.
                     </p>
                 </div>
             </header>
 
-            <Breadcrumbs title="Contact" />
+            <Breadcrumbs title="찾아오시는 길" />
 
             {/* Map Section */}
             <section style={styles.section}>
@@ -137,31 +183,31 @@ const ContactPage = () => {
                         <div>
                             <div style={styles.infoBox}>
                                 <h2 style={styles.infoTitle}>
-                                    <i className="fa-solid fa-location-dot"></i> Location
+                                    <i className="fa-solid fa-location-dot"></i> 위치 (Location)
                                 </h2>
                                 <p style={styles.infoContent}>
                                     {contact.address} <br />
-                                    대한체육회 빌딩 7층
+                                    <strong>대한체육회 빌딩 7층</strong> (서울파이낸스센터 SFC 옆, 청계천 남측 무교동 초입)
                                 </p>
                             </div>
 
                             <div style={styles.infoBox}>
                                 <h2 style={styles.infoTitle}>
-                                    <i className="fa-solid fa-phone"></i> Contact
+                                    <i className="fa-solid fa-phone"></i> 연락처 (Contact)
                                 </h2>
                                 <p style={styles.infoContent}>
-                                    전화: {contact.phone} <br />
+                                    대표전화: <strong>{contact.phone}</strong> <br />
                                     이메일: {contact.email}
                                 </p>
                             </div>
 
                             <div style={styles.infoBox}>
                                 <h2 style={styles.infoTitle}>
-                                    <i className="fa-solid fa-clock"></i> Hours
+                                    <i className="fa-solid fa-clock"></i> 진료시간 (Hours)
                                 </h2>
                                 <p style={styles.infoContent}>
                                     평일: 9:30 AM - 7:00 PM <br />
-                                    토요일: 10:00 AM - 12:00 PM (격주 진료) <br />
+                                    토요일: 10:00 AM - 12:00 PM (격주 진료 / 예약 우선제) <br />
                                     일요일/공휴일: 휴무
                                 </p>
                             </div>
@@ -170,7 +216,7 @@ const ContactPage = () => {
                         {/* Column 2: Directions */}
                         <div>
                             <h2 style={styles.infoTitle}>
-                                <i className="fa-solid fa-compass"></i> Directions
+                                <i className="fa-solid fa-compass"></i> 찾아오시는 길 상세 (Directions)
                             </h2>
 
                             <div style={styles.directionItem}>
@@ -178,14 +224,14 @@ const ContactPage = () => {
                                     <i className="fa-solid fa-train-subway" style={{ color: '#0052A4' }}></i> 지하철 이용 시
                                 </h3>
                                 <div style={styles.infoContent}>
-                                    <p style={{ marginBottom: '10px' }}>
+                                    <p style={{ marginBottom: '12px' }}>
                                         <span style={{ ...styles.tag, ...styles.tagLine1 }}>1호선</span>
                                         <span style={{ ...styles.tag, ...styles.tagLine2 }}>2호선</span>
-                                        <strong>시청역</strong> 5번 출구에서 도보 약 3분
+                                        <strong>시청역 5번 출구</strong>에서 서울시청 광장을 등지고 무교동 음식문화거리(서울파이낸스센터 SFC 뒤편) 방향으로 도보 약 3분 (약 200m 직진 후 대한체육회 빌딩 7층)
                                     </p>
                                     <p>
                                         <span style={{ ...styles.tag, ...styles.tagLine2 }}>2호선</span>
-                                        <strong>을지로입구역</strong> 1번 출구 혹은 1-1번 출구에서 도보 약 5분
+                                        <strong>을지로입구역 1번 또는 1-1번 출구</strong>에서 시청 방향으로 직진 후, 서울파이낸스센터(SFC) 빌딩 모퉁이에서 무교동 골목으로 좌회전하여 약 150m 도보 이동 (도보 약 5분)
                                     </p>
                                 </div>
                             </div>
@@ -195,26 +241,15 @@ const ContactPage = () => {
                                     <i className="fa-solid fa-bus" style={{ color: '#ff5e62' }}></i> 버스 이용 시
                                 </h3>
                                 <div style={styles.infoContent}>
-                                    <p>서울시청, 국가인권위, 무교동 정류장 하차</p>
-                                    <p style={{ fontSize: '14px', color: '#888', marginTop: '5px' }}>
-                                        간선: 101, 150, 402, 500, 501, 506 등 <br />
-                                        지선: 1711, 7016, 7022 등
+                                    <p><strong>서울시청, 국가인권위원회, 무교동, 시청광장</strong> 정류장에서 하차하여 도보 2~3분 내 빌딩 도착</p>
+                                    <p style={{ fontSize: '14px', color: '#888', marginTop: '8px' }}>
+                                        간선버스: 101, 150, 402, 500, 501, 506, 708 등 <br />
+                                        지선버스: 1711, 7016, 7022, 7019 등
                                     </p>
                                 </div>
                             </div>
 
-                            <div style={styles.directionItem}>
-                                <h3 style={styles.directionTitle}>
-                                    <i className="fa-solid fa-car" style={{ color: '#333' }}></i> 자가용 및 주차
-                                </h3>
-                                <div style={styles.infoContent}>
-                                    <p>네비게이션: '대한체육회' 또는 '무교로 16' 검색</p>
-                                    <p style={{ marginTop: '10px' }}>
-                                        <strong>[주차 안내]</strong> <br />
-                                        건물 내 주차가 어려운 점 양해 부탁드립니다. 인근 건물의 주차장 이용을 권장해 드립니다.
-                                    </p>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,36 @@ import jointPainImage from '../assets/images/joint_pain_treatment.png';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const JointPain = () => {
+    // AEO/GEO FAQPage Schema Markup
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "무릎 관절염이나 손가락 관절 통증에도 약침 치료가 효과적인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네, 매우 효과적입니다. 관절염은 관절 연골의 마모와 주변 인대 및 힘줄의 염증성 반응으로 유발됩니다. 본원에서는 염증을 즉각 가라앉히는 천연 봉독 및 약침 약재와 관절 주변 조직의 자생력을 촉진하는 PDRN(연어 DNA) 약침을 병행하여 염증 유발 물질을 제거하고 약해진 주변 인대와 근육을 단단하게 보강합니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "초음파 유도하 시술은 기존의 일반 침/주사 치료보다 왜 안전한가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "무릎, 손가락, 고관절 등은 미세한 힘줄과 복잡한 신경이 촘촘히 얽혀있습니다. 육안에만 의존해 투여할 경우 타겟팅이 흔들리거나 미세 혈관을 건드릴 수 있지만, 본원에서는 실시간 초음파 유도를 통해 바늘의 진행 방향과 정확한 병변 위치를 mm 단위로 관찰하며 시술합니다. 덕분에 불필요한 정상 조직 손상을 최소화하여 극도로 안전하며, 적은 풍부한 천연 약액만으로도 확실한 통증 해소 효과를 만듭니다."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="joint-pain-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             {/* Hero Section */}
             <div className="page-hero">
                 <div className="container">
@@ -149,6 +177,36 @@ const JointPain = () => {
                         </div>
                     </div>
 
+                </div>
+
+                {/* FAQ Section */}
+                <div className="clinical-faq-section" style={{ marginTop: '80px', paddingTop: '60px', borderTop: '1px solid #eee' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+                        <span style={{ color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '8px' }}>FAQ</span>
+                        <h3 style={{ fontSize: '26px', color: '#333', fontWeight: 'bold', margin: 0 }}>관절/통증 클리닉 자주 묻는 질문</h3>
+                    </div>
+
+                    <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px', marginTop: '30px' }}>
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                무릎 관절염이나 손가락 관절 통증에도 약침 치료가 효과적인가요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                네, 매우 효과적입니다. 관절염은 관절 연골의 마모와 주변 인대 및 힘줄의 염증성 반응으로 유발됩니다. 본원에서는 염증을 즉각 가라앉히는 <strong>천연 봉독 및 약침 약재</strong>와 관절 주변 조직의 자생력을 촉진하는 <strong>PDRN(연어 DNA) 약침</strong>을 병행하여 염증 유발 물질을 제거하고 약해진 주변 인대와 근육을 단단하게 보강합니다.
+                            </p>
+                        </div>
+
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                초음파 유도하 시술은 기존의 일반 침/주사 치료보다 왜 안전한가요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                무릎, 손가락, 고관절 등은 미세한 힘줄과 복잡한 신경이 촘촘히 얽혀있습니다. 육안에만 의존해 투여할 경우 타겟팅이 흔들리거나 미세 혈관을 건드릴 수 있지만, 본원에서는 <strong>실시간 초음파 유도</strong>를 통해 바늘의 진행 방향과 정확한 병변 위치를 mm 단위로 관찰하며 시술합니다. 덕분에 불필요한 정상 조직 손상을 최소화하여 극도로 안전하며, 적은 풍부한 천연 약액만으로도 확실한 통증 해소 효과를 만듭니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div style={{ marginTop: '60px', textAlign: 'center' }}>

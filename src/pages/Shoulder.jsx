@@ -4,8 +4,36 @@ import shoulderImage from '../assets/images/shoulder_treatment.png';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const Shoulder = () => {
+    // AEO/GEO FAQPage Schema Markup
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "오십견이나 회전근개 파열 치료 시 스테로이드 주사를 꼭 맞아야 하나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "아닙니다. 스테로이드는 일시적으로 강력한 소염 작용을 하지만 반복적으로 맞으면 어깨 인대와 힘줄을 약화시키고 퇴행을 촉진할 수 있습니다. 본원에서는 초음파 유도하 천연 성분 약침과 PDRN(DNA) 주사 요법을 사용하여 힘줄 주변의 유착과 염증을 정밀하게 치료하므로, 스테로이드의 부작용 걱정 없이 손상된 힘줄의 세포 재생을 촉진하고 자생적 회복을 유도할 수 있습니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "한방 비수술 치료의 효과와 안전성은 어떻게 증명되나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "본원에서는 미국의사협회 근골격계 초음파 인증의(RMSK) 자격을 보유한 대표원장이 실시간 고해상도 초음파를 통해 복잡한 어깨 관절낭 내부와 힘줄의 마찰, 석회 침착 지점을 눈으로 직접 확인하며 시술합니다. 통증 부위에만 소량의 정제 약액을 정밀하게 타겟하여 주입하므로 주변 조직이나 혈관 손상 위험 없이 안전하며, 시술 후 어깨 가동 범위를 단계적으로 넓히는 가동 추나요법을 병행하여 빠른 관절 회복 효과를 냅니다."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="shoulder-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             {/* Hero Section */}
             <div className="page-hero">
                 <div className="container">
@@ -145,6 +173,36 @@ const Shoulder = () => {
                         </div>
                     </div>
 
+                </div>
+
+                {/* FAQ Section */}
+                <div className="clinical-faq-section" style={{ marginTop: '80px', paddingTop: '60px', borderTop: '1px solid #eee' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+                        <span style={{ color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '8px' }}>FAQ</span>
+                        <h3 style={{ fontSize: '26px', color: '#333', fontWeight: 'bold', margin: 0 }}>어깨 관절 클리닉 자주 묻는 질문</h3>
+                    </div>
+
+                    <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px', marginTop: '30px' }}>
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                오십견이나 회전근개 파열 치료 시 스테로이드 주사를 꼭 맞아야 하나요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                아닙니다. 스테로이드는 일시적으로 강력한 소염 작용을 하지만 반복적으로 맞으면 어깨 인대와 힘줄을 약화시키고 퇴행을 촉진할 수 있습니다. 본원에서는 <strong>초음파 유도하 천연 성분 약침</strong>과 <strong>PDRN(DNA) 주사 요법</strong>을 사용하여 힘줄 주변의 유착과 염증을 정밀하게 치료하므로, 스테로이드의 부작용 걱정 없이 손상된 힘줄의 세포 재생을 촉진하고 자생적 회복을 유도할 수 있습니다.
+                            </p>
+                        </div>
+
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                한방 비수술 치료의 효과와 안전성은 어떻게 증명되나요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                본원에서는 미국의사협회 근골격계 초음파 인증의(RMSK) 자격을 보유한 대표원장이 <strong>실시간 고해상도 초음파</strong>를 통해 복잡한 어깨 관절낭 내부와 힘줄의 마찰, 석회 침착 지점을 눈으로 직접 확인하며 시술합니다. 통증 부위에만 소량의 정제 약액을 정밀하게 타겟하여 주입하므로 주변 조직이나 혈관 손상 위험 없이 안전하며, 시술 후 어깨 가동 범위를 단계적으로 넓히는 <strong>가동 추나요법</strong>을 병행하여 빠른 관절 회복 효과를 냅니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div style={{ marginTop: '60px', textAlign: 'center' }}>

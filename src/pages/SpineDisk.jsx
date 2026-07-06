@@ -4,8 +4,37 @@ import spineDiskImage from '../assets/images/spine_disk_treatment.png';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const SpineDisk = () => {
+    // AEO/GEO FAQPage Schema Markup
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "시청역 근처에서 스테로이드 없이 디스크 치료가 가능한가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네, 충분히 가능합니다. 본원에서는 신경을 일시 마비시키는 스테로이드 주사 대신, 천연 한약재 성분을 정제한 특화 약침과 연어 DNA 성분으로 손상된 조직 복원을 돕는 PDRN 재생 치료를 사용합니다. 실시간 초음파 유도하에 병변 부위를 눈으로 직접 보며 정밀 주입하기 때문에 통증 차단과 조직 재생의 근본적인 회복 효과를 냅니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "척추관협착증에도 한방 비수술 치료(하이드로다이섹션)가 효과가 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "협착증은 신경 통로가 좁아져 유착되고 압박되어 발생합니다. 실시간 초음파 영상을 통해 압박 부위에 물리적으로 생리식염액과 천연 약침액을 분사하여 공간을 열어주는 하이드로다이섹션(Hydrodissection, 신경박리술)을 시행합니다. 유착된 신경막이 떨어지면서 혈류 개선과 신경 압박이 해소되어 보행 통증과 다리 저림 증상이 크게 개선됩니다."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="spine-disk-page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
+
             {/* Hero Section */}
             <div className="page-hero">
                 <div className="container">
@@ -89,6 +118,36 @@ const SpineDisk = () => {
                                     <li><strong>침 및 전침 요법:</strong> 경직된 근육을 이완하고 기혈 순환을 도와 통증 완화 및 가동 범위 회복을 돕습니다.</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="clinical-faq-section" style={{ marginTop: '80px', paddingTop: '60px', borderTop: '1px solid #eee' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+                        <span style={{ color: 'var(--secondary-color)', fontWeight: 'bold', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px', display: 'block', marginBottom: '8px' }}>FAQ</span>
+                        <h3 style={{ fontSize: '26px', color: '#333', fontWeight: 'bold', margin: 0 }}>척추/디스크 클리닉 자주 묻는 질문</h3>
+                    </div>
+
+                    <div className="faq-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '25px', marginTop: '30px' }}>
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                시청역 근처에서 스테로이드 없이 디스크 치료가 가능한가요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                네, 충분히 가능합니다. 본원에서는 신경을 일시 마비시키는 스테로이드 주사 대신, 천연 한약재 성분을 정제한 <strong>특화 약침</strong>과 연어 DNA 성분으로 손상된 조직 복원을 돕는 <strong>PDRN 재생 치료</strong>를 사용합니다. 실시간 초음파 유도하에 병변 부위를 눈으로 직접 보며 정밀 주입하기 때문에 통증 차단과 조직 재생의 근본적인 회복 효과를 냅니다.
+                            </p>
+                        </div>
+
+                        <div className="faq-item" style={{ backgroundColor: '#fff', padding: '25px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', borderLeft: '4px solid var(--secondary-color)', border: '1px solid #f1f1f1', borderLeftWidth: '4px' }}>
+                            <h4 style={{ fontSize: '16px', color: '#333', marginBottom: '12px', fontWeight: 'bold', display: 'flex', gap: '8px' }}>
+                                <span style={{ color: 'var(--secondary-color)' }}>Q.</span>
+                                척추관협착증에도 한방 비수술 치료(하이드로다이섹션)가 효과가 있나요?
+                            </h4>
+                            <p style={{ fontSize: '14px', lineHeight: '1.7', color: '#666', margin: 0 }}>
+                                협착증은 신경 통로가 좁아져 유착되고 압박되어 발생합니다. 실시간 초음파 영상을 통해 압박 부위에 물리적으로 생리식염액과 천연 약침액을 분사하여 공간을 열어주는 <strong>하이드로다이섹션(Hydrodissection, 신경박리술)</strong>을 시행합니다. 유착된 신경막이 떨어지면서 혈류 개선과 신경 압박이 해소되어 보행 통증과 다리 저림 증상이 크게 개선됩니다.
+                            </p>
                         </div>
                     </div>
                 </div>
