@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import DoctorProfile from './pages/DoctorProfile';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 
 import SpineDisk from './pages/SpineDisk';
 
@@ -55,6 +57,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
 
           <Route path="/doctor" element={<DoctorProfile />} />
           <Route path="/departments" element={<DepartmentsPage />} />

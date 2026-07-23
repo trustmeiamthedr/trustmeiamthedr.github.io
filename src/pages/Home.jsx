@@ -5,6 +5,7 @@ import Features from '../components/Features';
 import Departments from '../components/Departments';
 import Doctors from '../components/Doctors';
 import News from '../components/News';
+import BlogSection from '../components/BlogSection';
 import { contact } from '../data';
 
 function Home() {
@@ -67,42 +68,11 @@ function Home() {
             <Hero />
             <InfoBar />
             
-            {/* 여름 휴가 안내 배너 */}
-            <div className="vacation-banner" style={{
-                background: 'linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%)',
-                border: '1px solid #ffc9c9',
-                borderRadius: '12px',
-                padding: '16px 24px',
-                margin: '40px auto 10px auto',
-                maxWidth: '1200px',
-                width: 'calc(100% - 40px)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '15px',
-                boxShadow: '0 4px 15px rgba(255, 107, 107, 0.08)',
-                boxSizing: 'border-box'
-            }}>
-                <span className="vacation-icon" style={{
-                    fontSize: '20px',
-                    display: 'inline-block'
-                }}>
-                    📢
-                </span>
-                <span className="vacation-text" style={{
-                    fontSize: '16px',
-                    fontWeight: '700',
-                    color: '#c92a2a',
-                    lineHeight: '1.5'
-                }}>
-                    <strong>[여름 휴가 안내]</strong> 7월 11일(토) ~ 7월 14일(화) 휴진합니다. 내원 및 예약 시 참고해 주시기 바랍니다.
-                </span>
-            </div>
-
             <Departments />
             <Features />
             <Doctors />
             <News />
+            <BlogSection />
         </>
     );
 }
