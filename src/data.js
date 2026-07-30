@@ -18,22 +18,22 @@ export const heroSlider = { // Keep as fallback/alias if needed by other compone
 export const heroSlides = [
     {
         image: heroSlide1, // Updated image
-        subtitle: "일시적 진통 대신, 붓기를 빼고 영양을 공급해 세포 스스로 살아나게 합니다.",
-        title: "통증 완화를 넘어, 근본적 회복 환경 구축",
+        subtitle: "내 몸의 자연 회복력을 깨워, 손상된 조직을 빠르게 재생시키는 치료.",
+        title: "조직 재생 및 회복력",
         buttonText: "예약하기",
         link: "https://booking.naver.com/booking/13/bizes/384022"
     },
     {
         image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2953&auto=format&fit=crop", // Hospital hallway/modern
-        subtitle: "뼈와 힘줄의 마찰과 압박을 정밀하게 교정하여 비수술적 회복을 도웁니다.",
-        title: "수술 걱정 전, 아픈 '움직임 환경' 개선",
+        subtitle: "엉킨 조직의 유착과 압박을 풀어, 통증은 지우고 운동 능력은 높이는 치료.",
+        title: "통증 해소 및 운동능력 향상",
         buttonText: "예약하기",
         link: "https://booking.naver.com/booking/13/bizes/384022"
     },
     {
         image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2940&auto=format&fit=crop", // Medical staff/team
-        subtitle: "노화가 아닌 누적된 과부하를 해결하여 힘줄 본래의 탄력을 되찾아 드립니다.",
-        title: "나이 탓이 아닌, 지친 관절의 '과부하 해소'",
+        subtitle: "치료받을수록 더 건강해지는, 매일매일 반복해서 받고 싶은 치료.",
+        title: "근본적인 건강 증진",
         buttonText: "예약하기",
         link: "https://booking.naver.com/booking/13/bizes/384022"
     }
