@@ -2,9 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data';
 
+const parseDate = (dateStr) => {
+    if (!dateStr) return 0;
+    const parts = dateStr.split('.').map(p => p.trim());
+    if (parts.length === 3 && parts[0].length === 4) {
+        return parseInt(`${parts[0]}${parts[1].padStart(2, '0')}${parts[2].padStart(2, '0')}`, 10) || 0;
+    }
+    const parsed = Date.parse(dateStr.replace(/\./g, '-'));
+    return isNaN(parsed) ? 0 : parsed;
+};
+
 const BlogSection = () => {
-    // Only take the first 3 posts
-    const latestBlogs = blogPosts.slice(0, 3);
+    // Sort posts by date descending and take the 3 most recent posts
+    const sortedBlogPosts = [...blogPosts].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    const latestBlogs = sortedBlogPosts.slice(0, 3);
 
     return (
         <section className="blog-section" style={{ padding: '80px 0', backgroundColor: '#f9f9f9' }}>

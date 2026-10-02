@@ -2,10 +2,22 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from '../data';
 
+const parseDate = (dateStr) => {
+    if (!dateStr) return 0;
+    const parts = dateStr.split('.').map(p => p.trim());
+    if (parts.length === 3 && parts[0].length === 4) {
+        return parseInt(`${parts[0]}${parts[1].padStart(2, '0')}${parts[2].padStart(2, '0')}`, 10) || 0;
+    }
+    const parsed = Date.parse(dateStr.replace(/\./g, '-'));
+    return isNaN(parsed) ? 0 : parsed;
+};
+
 const BlogList = () => {
     useEffect(() => {
         document.title = "블로그 | 경희무교로한의원";
     }, []);
+
+    const sortedBlogPosts = [...blogPosts].sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
     const schemaData = {
         "@context": "https://schema.org",
@@ -33,7 +45,7 @@ const BlogList = () => {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '40px' }}>
-                    {blogPosts.map((blog) => (
+                    {sortedBlogPosts.map((blog) => (
                         <article key={blog.id} style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', display: 'flex', flexDirection: 'column' }}>
                             <Link to={`/blog/${blog.id}`} style={{ display: 'block', overflow: 'hidden', height: '240px' }}>
                                 <img 
